@@ -1,6 +1,12 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
+    "lint": "lerna run lint",
+    "start": "lerna run start",
+    "build": "lerna run build"
+  },
   "workspaces": [
     "packages/*"
   ],
