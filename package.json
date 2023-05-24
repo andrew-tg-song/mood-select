@@ -2,8 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
     "lint": "lerna run lint",
+    "format": "prettier -w .",
     "start": "lerna run start",
     "build": "lerna run build"
   },
@@ -11,6 +11,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^6.6.2"
+    "lerna": "^6.6.2",
+    "prettier": "^2.8.8"
   }
 }
