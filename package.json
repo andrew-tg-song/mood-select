@@ -5,7 +5,8 @@
     "lint": "lerna run lint",
     "format": "prettier -w .",
     "start": "lerna run start",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "version-up": "lerna version"
   },
   "workspaces": [
     "packages/*"
