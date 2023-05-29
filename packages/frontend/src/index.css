@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'notosans-regular';
+  src: url('./assets/fonts/NotoSansKR-Regular.otf');
+}
+
+@font-face {
+  font-family: 'notosans-light';
+  src: url('./assets/fonts/NotoSansKR-Light.otf');
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* line-height: 1.5;
@@ -18,6 +28,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  font-family: 'notosans-regular';
 }
 
 a {
