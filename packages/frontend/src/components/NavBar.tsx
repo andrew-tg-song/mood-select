@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/logo.png';
-import { CiMenuBurger, CiSearch, CiLock, CiUser, CiHeart, CiDark, CiLight } from 'react-icons/ci';
+import { CiMenuBurger, CiSearch, CiUser, CiHeart, CiDark, CiLight } from 'react-icons/ci';
+import { GiShoppingCart } from 'react-icons/gi';
+import TopEventBanner from './header/TopEventBanner';
 
 export default function NavBar() {
+  const [cartCount, setCartCount] = useState(0);
+  const [wishCount, setWishCount] = useState(0);
+
   return (
     <div className="w-[100%] h-[220px]">
-      <div className="w-[100%] h-[40px] bg-black flex justify-center items-center">
-        <p className="text-white font-light text-[0.875rem]">7일 연속 출석 시 적립금 1,000원 ⏰</p>
-      </div>
+      <TopEventBanner />
 
       <div className="w-[100%] h-[120px] border-[#dedede] border-solid border-b-[0.6px]">
         <div className="w-[93.75rem] h-[100%] mx-auto flex flex-row items-center justify-between relative">
@@ -52,13 +55,19 @@ export default function NavBar() {
             <li>
               <CiSearch />
             </li>
-            <li>
-              <CiLock />
+            <li className="relative">
+              <div className="absolute top-[-4px] right-[-6px] w-[0.9rem] h-[0.9rem] bg-black rounded-full text-white text-[0.7rem] font-light flex justify-center items-center">
+                {cartCount}
+              </div>
+              <GiShoppingCart />
             </li>
             <li>
               <CiUser />
             </li>
-            <li>
+            <li className="relative">
+              <div className="absolute top-[-4px] right-[-6px] w-[0.9rem] h-[0.9rem] bg-black rounded-full text-white text-[0.7rem] font-light flex justify-center items-center">
+                {wishCount}
+              </div>
               <CiHeart />
             </li>
             <li>
