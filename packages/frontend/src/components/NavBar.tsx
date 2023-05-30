@@ -15,7 +15,7 @@ export default function NavBar() {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
   return (
-    <div className="w-[100%] h-[220px]">
+    <div className="w-[100%] h-[220px] font-sans">
       <TopEventBanner />
 
       <div
@@ -24,8 +24,8 @@ export default function NavBar() {
         } w-[100%] h-[120px] border-solid border-b-[0.6px]`}
       >
         <div className="w-[93.75rem] h-[100%] mx-auto flex flex-row items-center justify-between relative">
-          <div className="w-[250px] h-[100%] flex items-center absolute left-[50%] ml-[-108px]">
-            <img src={`${darkMode === 'light' ? darkLogo : lightLogo}`} className="w-[100%] h-[80px] object-cover" />
+          <div className="w-[216px] h-[100%] flex items-center absolute left-[50%] ml-[-108px]">
+            <img src={`${darkMode === 'light' ? darkLogo : lightLogo}`} className="w-[100%] object-cover" />
           </div>
 
           <ul className="text-[#999999] text-[0.75rem] flex absolute right-0 cursor-pointer">

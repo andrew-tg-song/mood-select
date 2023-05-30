@@ -12,10 +12,10 @@ export default function Footer() {
         darkMode === 'light'
           ? 'bg-[#1d1d1d] text-[#e4e4e4]'
           : 'bg-[#ebebeb] text-[#6b6b6b] border-t-[0.8px] border-[#ebebeb] border-solid'
-      } w-[100%] text-[0.8125rem]`}
+      } w-[100%] text-[0.8125rem] font-sans`}
     >
       <div className="w-[93.75rem] h-[100%] pt-[3rem] pb-[4.375rem] box-border mx-auto flex flex-col justify-between relative">
-        <div className="w-[250px]">
+        <div className="w-[216px]">
           <img className="w-[100%] height-[100%] object-cover" src={`${darkMode === 'light' ? lightLogo : darkLogo}`} />
         </div>
 
@@ -40,11 +40,11 @@ export default function Footer() {
             <p>Copyright ⓒ 2023 All rights reserved. designed by SEUNGMIN.</p>
           </div>
 
-          <div className="w-[50%] h-[100%]  ">
+          <div className="w-[50%] h-[100%]">
             <ul className="flex justify-between">
               <li>
-                <p>CS Center</p>
-                <p>1111-1111</p>
+                <p className="mb-[2.125rem] font-bold">CS Center</p>
+                <p className="text-[1.125rem] font-bold mb-[1.25rem]">1111-1111</p>
                 <p>
                   평일 AM 10:00 - PM 05:00
                   <br />
@@ -54,7 +54,7 @@ export default function Footer() {
                 </p>
               </li>
               <li>
-                <p>RETURNS.DELIVERY</p>
+                <p className="mb-[2.125rem] font-bold">RETURNS.DELIVERY</p>
                 <p>
                   CJ대한통운택배 (1588-1255)
                   <br />
@@ -64,7 +64,7 @@ export default function Footer() {
                 </p>
               </li>
               <li>
-                <p>BANK INFO</p>
+                <p className="mb-[2.125rem] font-bold">BANK INFO</p>
                 <p>
                   국민. 000000-00-000000
                   <br />
