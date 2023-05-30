@@ -12,6 +12,11 @@
   src: url('./assets/fonts/NotoSansKR-Light.otf');
 }
 
+@font-face {
+  font-family: 'Peddana';
+  src: url('./assets/fonts/Peddana-Regular.ttf');
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* line-height: 1.5;
