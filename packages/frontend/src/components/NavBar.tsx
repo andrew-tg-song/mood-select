@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import logo from '../assets/logo.png';
 import { CiMenuBurger, CiSearch, CiUser, CiHeart, CiDark, CiLight } from 'react-icons/ci';
 import { GiShoppingCart } from 'react-icons/gi';
 import TopEventBanner from './header/TopEventBanner';
+import { DarkModeContext } from '../context/DarkModeContext';
 
 export default function NavBar() {
   const [cartCount, setCartCount] = useState(0);
   const [wishCount, setWishCount] = useState(0);
+
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
   return (
     <div className="w-[100%] h-[220px]">
@@ -14,7 +17,7 @@ export default function NavBar() {
 
       <div className="w-[100%] h-[120px] border-[#dedede] border-solid border-b-[0.6px]">
         <div className="w-[93.75rem] h-[100%] mx-auto flex flex-row items-center justify-between relative">
-          <div className="w-[216px] h-[100%] flex items-center absolute left-[50%] ml-[-108px]">
+          <div className="w-[250px] h-[100%] flex items-center absolute left-[50%] ml-[-108px]">
             <img src={logo} className="w-[100%] h-[80px] object-cover" />
           </div>
 
@@ -34,9 +37,9 @@ export default function NavBar() {
             <li>
               <CiMenuBurger />
             </li>
-            <li>NEW</li>
-            <li>BEST</li>
-            <li>오늘 출발 제품🚛</li>
+            <li className="text-[#FF5E5E]">NEW</li>
+            <li className="text-[#FF5E5E]">BEST</li>
+            <li className="text-[#FF5E5E]">오늘 출발 제품🚛</li>
             <li>블라우스&셔츠</li>
             <li>티셔츠</li>
             <li>니트</li>
@@ -46,9 +49,9 @@ export default function NavBar() {
             <li>언더웨어</li>
             <li>비치웨어</li>
             <li>악세잡화</li>
-            <li>SALE</li>
-            <li>EVENT🥳</li>
-            <li>REVIEW</li>
+            <li className="text-[#FF5EDB]">SALE</li>
+            <li className="text-[#FF5E5E]">EVENT🥳</li>
+            <li className="text-[#FF5E5E]">REVIEW</li>
           </ul>
 
           <ul className="w-[11.625rem] h-[100%] flex justify-between items-center text-[1.2rem]">
@@ -70,9 +73,7 @@ export default function NavBar() {
               </div>
               <CiHeart />
             </li>
-            <li>
-              <CiDark />
-            </li>
+            <li onClick={toggleDarkMode}>{darkMode === 'dark' ? <CiLight /> : <CiDark />}</li>
           </ul>
         </div>
       </div>
