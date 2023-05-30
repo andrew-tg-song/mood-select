@@ -3,7 +3,11 @@ import { DarkModeContext } from '../context/DarkModeContext';
 import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
 import { AiOutlineWechat } from 'react-icons/ai';
 
-export default function QuickMenu() {
+interface QuickMenuPropsType {
+  contentRef: React.ForwardedRef<HTMLDivElement>;
+}
+
+export default function QuickMenu({ contentRef }: QuickMenuPropsType) {
   const { darkMode } = useContext(DarkModeContext);
 
   const [scrollY, setScrollY] = useState(0);
@@ -20,6 +24,13 @@ export default function QuickMenu() {
     });
     setScrollY(0);
     setShowButton(false);
+  };
+
+  const handleBottom = () => {
+    contentRef && contentRef.current.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
+    // 오류 발생
+    setScrollY(scrollY);
+    setShowButton(true);
   };
 
   useEffect(() => {
@@ -68,6 +79,7 @@ export default function QuickMenu() {
         <BsChevronUp />
       </div>
       <div
+        onClick={handleBottom}
         className={`${
           darkMode === 'light' ? 'bg-[#0f0f0f]' : 'bg-white'
         } w-[60px] h-[60px] rounded-full drop-shadow-[0_5px_2px_rgba(0,0,0,0.25)] mt-[10px] flex justify-center items-center cursor-pointer animate-bounce`}
