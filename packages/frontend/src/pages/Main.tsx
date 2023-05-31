@@ -7,9 +7,8 @@ export default function Main() {
 
   return (
     <div className={`${darkMode === 'light' ? 'bg-white text-black' : 'bg-[#0f0f0f] text-white'} h-[5000px]`}>
-      <div className="w-[81.25rem] mx-auto py-[8.75rem]">
-        <BestProductRecommendation />
-      </div>
+      <BestProductRecommendation />
+      <div className="w-[81.25rem] mx-auto py-[8.75rem]"></div>
     </div>
   );
 }

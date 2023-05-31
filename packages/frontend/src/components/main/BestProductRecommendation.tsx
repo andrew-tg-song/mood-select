@@ -4,53 +4,30 @@ import CardSlider from '../slider/CardSlider';
 const BestProductRecommendation = (): JSX.Element => {
   const items = [
     {
-      image: 'https://i.pinimg.com/564x/03/d6/6d/03d66d6028048e993e8eda27b9acde47.jpg',
-      title: 'slide 1',
-      desc: 'slide 111111111111111111',
+      image: 'https://atimg.sonyunara.com/files/attrangs/goods/154178/6476b7874c509.jpg',
+      title: 'PANTS',
+      desc: '언제 어디서든 편안하게',
     },
     {
-      image: 'https://i.pinimg.com/564x/03/d6/6d/03d66d6028048e993e8eda27b9acde47.jpg',
-      title: 'slide 2',
-      desc: 'slide 111111111111111111',
+      image: 'https://atimg.sonyunara.com/files/attrangs/goods/140777/642d31658d0e8.jpg',
+      title: 'ONE PIECE',
+      desc: '어디서든 나를 돋보이게',
     },
     {
-      image: 'https://i.pinimg.com/564x/03/d6/6d/03d66d6028048e993e8eda27b9acde47.jpg',
-      title: 'slide 3',
-      desc: 'slide 111111111111111111',
+      image: 'https://atimg.sonyunara.com/files/attrangs/goods/153872/1684940318_3.jpg',
+      title: 'CARDIGAN',
+      desc: '어디서든 산뜻하게',
     },
     {
-      image: 'https://i.pinimg.com/564x/03/d6/6d/03d66d6028048e993e8eda27b9acde47.jpg',
-      title: 'slide 4',
-      desc: 'slide 111111111111111111',
-    },
-    {
-      image: 'https://i.pinimg.com/564x/03/d6/6d/03d66d6028048e993e8eda27b9acde47.jpg',
-      title: 'slide 5',
-      desc: 'slide 111111111111111111',
-    },
-    {
-      image: 'https://i.pinimg.com/564x/03/d6/6d/03d66d6028048e993e8eda27b9acde47.jpg',
-      title: 'slide 6',
-      desc: 'slide 111111111111111111',
-    },
-    {
-      image: 'https://i.pinimg.com/564x/03/d6/6d/03d66d6028048e993e8eda27b9acde47.jpg',
-      title: 'slide 7',
-      desc: 'slide 111111111111111111',
-    },
-    {
-      image: 'https://i.pinimg.com/564x/03/d6/6d/03d66d6028048e993e8eda27b9acde47.jpg',
-      title: 'slide 8',
-      desc: 'slide 111111111111111111',
+      image: 'https://atimg.sonyunara.com/files/attrangs/goods/92113/6114d5bb5e303.jpg',
+      title: 'T-SHIRT',
+      desc: '꾸민듯 안 꾸민듯 자연스럽게',
     },
   ];
 
   return (
-    <div className="w-[100%] bg-pink-400">
-      <p>베스트 제품</p>
-      <p>고객님들께 가장 사랑받는 제품</p>
-
-      <CardSlider items={items} slidesToShow={2} />
+    <div className="w-[81.25rem] mx-auto py-[8.75rem]">
+      <CardSlider items={items} slidesToShow={2} slidesToScroll={1} />
     </div>
   );
 };

@@ -52,12 +52,13 @@
 
 // export default CardSlider;
 import Slider, { Settings } from 'react-slick';
+import { useContext } from 'react';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Items from './Items';
 import NextArrow from './NextArrow';
 import PrevArrow from './PrevArrow';
+import { DarkModeContext } from '../../context/DarkModeContext';
 
 interface ObjectProps {
   image: string;
@@ -77,30 +78,62 @@ interface sliderProps {
 
   slidesToShow?: number;
 
+  slidesToScroll?: number;
+
   items?: ObjectProps[];
 }
 
-function CardSlider({ className, autoplay = true, speed = 300, loop = true, items, slidesToShow }: sliderProps) {
+function CardSlider({
+  className,
+  autoplay = true,
+  speed = 300,
+  loop = true,
+  items,
+  slidesToShow,
+  slidesToScroll,
+}: sliderProps) {
+  const { darkMode } = useContext(DarkModeContext);
+
   const settings = {
     dots: true,
     infinite: loop,
     speed: speed,
     slidesToShow: slidesToShow,
+    slidesToScroll: slidesToScroll,
     autoplay: Boolean(autoplay),
     autoplaySpeed: typeof autoplay === 'boolean' ? 3000 : autoplay,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    appendDots: (dots: any) => (
+      <div
+        style={{
+          width: '100%',
+          position: 'absolute',
+          bottom: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <ul> {dots} </ul>
+      </div>
+    ),
+    dotsClass: darkMode === 'light' ? 'dots_custom' : 'dots_custom_dark',
   };
 
   return (
-    <div className={className}>
+    <div className="slider_wrapper">
       <Slider {...settings}>
         {items?.map((item) => {
           return (
-            <div>
-              <img src={item.image} />
-              <h1>{item.title}</h1>
-              <p>{item.desc}</p>
+            <div className="personal_slider">
+              <div className="dark_opacity" />
+
+              <img className="slider_img" src={item.image} />
+              <div className="desc_wrap">
+                <h1 className="desc_h1">{item.title}</h1>
+                <p className="desc_p">{item.desc}</p>
+              </div>
             </div>
           );
         })}

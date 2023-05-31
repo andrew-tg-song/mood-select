@@ -6494,6 +6494,11 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
 
+notosans-fontface@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/notosans-fontface/-/notosans-fontface-1.3.0.tgz#ba9d416f1644f2a88f190e50c1a5b50773aaeaf2"
+  integrity sha512-AEgyYAM09pxPGT0Vmi7Eq/naPeZPsNVvsWmqq9bW6jXRIsx3fuaZNIU31hGAtG/HkKCsUziB+8L2SFZATi1eHA==
+
 npm-bundled@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/npm-bundled/-/npm-bundled-1.1.2.tgz"

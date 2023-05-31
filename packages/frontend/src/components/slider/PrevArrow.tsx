@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsChevronLeft } from 'react-icons/bs';
 
 interface PrevArrowProps {
   onClick?: React.MouseEventHandler<HTMLDivElement>;
@@ -9,7 +10,7 @@ interface PrevArrowProps {
 export default function PrevArrow({ onClick }: PrevArrowProps) {
   return (
     <div className="prev-arrow" onClick={onClick}>
-      누르면 넘어감
+      <BsChevronLeft />
     </div>
   );
 }

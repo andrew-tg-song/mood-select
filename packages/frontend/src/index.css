@@ -3,13 +3,27 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'notosans-regular';
+  font-family: 'Noto Sans KR';
+  font-weight: 100;
+  src: url('./assets/fonts/NotoSansKR-Light.otf');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 400;
   src: url('./assets/fonts/NotoSansKR-Regular.otf');
 }
 
 @font-face {
-  font-family: 'notosans-light';
-  src: url('./assets/fonts/NotoSansKR-Light.otf');
+  font-family: 'Noto Sans KR';
+  font-weight: 500;
+  src: url('./assets/fonts/NotoSansKR-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 700;
+  src: url('./assets/fonts/NotoSansKR-Bold.otf');
 }
 
 @font-face {
@@ -34,7 +48,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  font-family: 'notosans-light';
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 100;
 }
 
 html {
@@ -80,6 +95,126 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.slider_wrapper {
+  width: 81.25rem;
+}
+
+.personal_slider {
+  width: 40rem;
+  height: 530px;
+
+  position: relative;
+}
+
+.dark_opacity {
+  width: 40rem;
+  height: 480px;
+  background-color: black;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.slider_img {
+  width: 40rem;
+  height: 480px;
+  object-fit: cover;
+}
+
+.desc_wrap {
+  position: absolute;
+  bottom: 90px;
+  left: 2.5rem;
+}
+
+.desc_h1 {
+  font-family: 'Peddana';
+  font-size: 4.375rem;
+  color: white;
+  line-height: 3rem;
+}
+
+.desc_p {
+  font-size: 1rem;
+  color: white;
+}
+
+.dots_custom,
+.dots_custom_dark {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto 0;
+  padding: 0;
+}
+
+.dots_custom li,
+.dots_custom_dark li {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+}
+
+.dots_custom li button {
+  border: none;
+  background: #d1d1d1;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  height: 2px;
+  width: 110px;
+  border-radius: 100%;
+  padding: 0;
+}
+
+.dots_custom li.slick-active button {
+  background-color: #282828;
+}
+
+.dots_custom_dark li button {
+  border: none;
+  background: #646464;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  height: 2px;
+  width: 110px;
+  border-radius: 100%;
+  padding: 0;
+}
+
+.dots_custom_dark li.slick-active button {
+  background-color: #ffffff;
+}
+
+.next-arrow {
+  font-size: 2rem;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -3rem;
+  right: -2.4rem;
+
+  z-index: 999999;
+
+  cursor: pointer;
+}
+
+.prev-arrow {
+  font-size: 2rem;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -3rem;
+  left: -3rem;
+
+  z-index: 999999;
+
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: light) {
