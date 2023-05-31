@@ -4,7 +4,7 @@ import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
 import { AiOutlineWechat } from 'react-icons/ai';
 
 interface QuickMenuPropsType {
-  contentRef: React.ForwardedRef<HTMLDivElement>;
+  contentRef: React.RefObject<HTMLDivElement>;
 }
 
 export default function QuickMenu({ contentRef }: QuickMenuPropsType) {
@@ -27,8 +27,7 @@ export default function QuickMenu({ contentRef }: QuickMenuPropsType) {
   };
 
   const handleBottom = () => {
-    contentRef && contentRef.current.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
-    // 오류 발생
+    contentRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
     setScrollY(scrollY);
     setShowButton(true);
   };
