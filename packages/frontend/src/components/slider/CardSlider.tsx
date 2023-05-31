@@ -51,7 +51,7 @@
 // };
 
 // export default CardSlider;
-import Slider, { Settings } from 'react-slick';
+import Slider from 'react-slick';
 import { useContext } from 'react';
 
 import 'slick-carousel/slick/slick.css';
@@ -84,18 +84,13 @@ interface sliderProps {
   items?: ObjectProps[];
 }
 
-function CardSlider({
-  className,
-  autoplay = true,
-  speed = 300,
-  loop = true,
-  items,
-  slidesToShow,
-  slidesToScroll,
-}: sliderProps) {
+function CardSlider({ autoplay = true, speed = 300, loop = true, items, slidesToShow, slidesToScroll }: sliderProps) {
   const { darkMode } = useContext(DarkModeContext);
 
   const settings = {
+    className: slidesToShow === 3 ? 'center' : '',
+    centerMode: slidesToShow === 3 ? true : false,
+    centerPadding: slidesToShow === 3 ? '0px' : 'none',
     dots: true,
     infinite: loop,
     speed: speed,
@@ -110,8 +105,8 @@ function CardSlider({
         style={{
           width: '100%',
           position: 'absolute',
-          bottom: 0,
-          display: slidesToShow === 1 ? 'none' : 'flex',
+          bottom: '-12px',
+          display: slidesToShow === 1 || slidesToShow === 3 ? 'none' : 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}
@@ -123,29 +118,55 @@ function CardSlider({
   };
 
   return (
-    <div className={`${slidesToShow === 1 ? 'slider_wrapper_main_slider' : 'slider_wrapper'}`}>
+    <div
+      className={`${
+        slidesToShow === 1
+          ? 'slider_wrapper_main_slider'
+          : slidesToShow === 2
+          ? 'slider_wrapper'
+          : 'slider_wrapper_best_products'
+      }`}
+    >
       <Slider {...settings}>
         {items?.map((item) => {
           return (
-            <div key={item.id} className={`${slidesToShow === 1 ? 'personal_slider_main_slider' : 'personal_slider'}`}>
+            <div
+              key={item.id}
+              className={`${
+                slidesToShow === 1
+                  ? 'personal_slider_main_slider'
+                  : slidesToShow === 2
+                  ? 'personal_slider'
+                  : 'personal_slider_best_products'
+              }`}
+            >
               {slidesToShow === 1 ? (
                 <div className="dark_opacity_main_slider" />
-              ) : (
+              ) : slidesToShow === 2 ? (
                 <div className={`${item.id % 2 === 0 ? 'dark_opacity' : 'dark_opacity2'}`} />
+              ) : (
+                <></>
               )}
 
               {slidesToShow === 1 ? (
                 <img className="main_slider_img" src={item.image} />
-              ) : (
+              ) : slidesToShow === 2 ? (
                 <img className={`${item.id % 2 === 0 ? 'slider_img' : 'slider_img2'}`} src={item.image} />
+              ) : (
+                <img className="best_products_slider_img" src={item.image} />
               )}
 
               {slidesToShow === 1 ? (
                 <div className="desc_wrap_main_slider">
                   <h1 className="desc_h1_main_slider">{item.title}</h1>
                 </div>
-              ) : (
+              ) : slidesToShow === 2 ? (
                 <div className="desc_wrap">
+                  <h1 className="desc_h1">{item.title}</h1>
+                  <p className="desc_p">{item.desc}</p>
+                </div>
+              ) : (
+                <div className="desc_wrap_best_products">
                   <h1 className="desc_h1">{item.title}</h1>
                   <p className="desc_p">{item.desc}</p>
                 </div>

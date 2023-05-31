@@ -1,4 +1,3 @@
-import React from 'react';
 import CardSlider from '../slider/CardSlider';
 import main_slider_img from '../../assets/main_slider_img.png';
 

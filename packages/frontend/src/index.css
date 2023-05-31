@@ -105,6 +105,13 @@ button:focus-visible {
   width: 100%;
 }
 
+.slider_wrapper_best_products {
+  width: 100%;
+  height: 590px;
+  background-color: #535bf2;
+  margin-top: 40px;
+}
+
 .personal_slider {
   width: 40rem;
   height: 530px;
@@ -115,7 +122,14 @@ button:focus-visible {
 .personal_slider_main_slider {
   width: 100%;
   height: 790px;
-  background-color: beige;
+
+  position: relative;
+}
+
+.personal_slider_best_products {
+  /* width: 27.125rem !important; */
+  width: 23.75rem !important;
+  height: 590px;
 
   position: relative;
 }
@@ -167,6 +181,36 @@ button:focus-visible {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.best_products_slider_img {
+  /* width: 23.75rem !important; */
+  width: 100% !important;
+  height: 530px;
+
+  object-fit: cover;
+
+  position: absolute;
+  left: 50%;
+  margin-left: -11.875rem;
+}
+
+.slick-slide.slick-center img {
+  transform: scale(1.1);
+  object-fit: cover;
+}
+
+.slick-slide.slick-center .desc_wrap_best_products {
+  display: block;
+
+  z-index: 99999999;
+
+  position: absolute;
+  top: 50%;
+}
+
+.desc_wrap_best_products {
+  display: none;
 }
 
 .slider_img {
