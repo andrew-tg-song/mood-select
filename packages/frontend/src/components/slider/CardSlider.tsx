@@ -61,6 +61,7 @@ import PrevArrow from './PrevArrow';
 import { DarkModeContext } from '../../context/DarkModeContext';
 
 interface ObjectProps {
+  id: number;
   image: string;
   title: string;
   desc: string;
@@ -102,15 +103,15 @@ function CardSlider({
     slidesToScroll: slidesToScroll,
     autoplay: Boolean(autoplay),
     autoplaySpeed: typeof autoplay === 'boolean' ? 3000 : autoplay,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow slidesToShow={slidesToShow} />,
+    prevArrow: <PrevArrow slidesToShow={slidesToShow} />,
     appendDots: (dots: any) => (
       <div
         style={{
           width: '100%',
           position: 'absolute',
           bottom: 0,
-          display: 'flex',
+          display: slidesToShow === 1 ? 'none' : 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}
@@ -122,18 +123,33 @@ function CardSlider({
   };
 
   return (
-    <div className="slider_wrapper">
+    <div className={`${slidesToShow === 1 ? 'slider_wrapper_main_slider' : 'slider_wrapper'}`}>
       <Slider {...settings}>
         {items?.map((item) => {
           return (
-            <div className="personal_slider">
-              <div className="dark_opacity" />
+            <div key={item.id} className={`${slidesToShow === 1 ? 'personal_slider_main_slider' : 'personal_slider'}`}>
+              {slidesToShow === 1 ? (
+                <div className="dark_opacity_main_slider" />
+              ) : (
+                <div className={`${item.id % 2 === 0 ? 'dark_opacity' : 'dark_opacity2'}`} />
+              )}
 
-              <img className="slider_img" src={item.image} />
-              <div className="desc_wrap">
-                <h1 className="desc_h1">{item.title}</h1>
-                <p className="desc_p">{item.desc}</p>
-              </div>
+              {slidesToShow === 1 ? (
+                <img className="main_slider_img" src={item.image} />
+              ) : (
+                <img className={`${item.id % 2 === 0 ? 'slider_img' : 'slider_img2'}`} src={item.image} />
+              )}
+
+              {slidesToShow === 1 ? (
+                <div className="desc_wrap_main_slider">
+                  <h1 className="desc_h1_main_slider">{item.title}</h1>
+                </div>
+              ) : (
+                <div className="desc_wrap">
+                  <h1 className="desc_h1">{item.title}</h1>
+                  <p className="desc_p">{item.desc}</p>
+                </div>
+              )}
             </div>
           );
         })}
