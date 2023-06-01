@@ -10,8 +10,11 @@ interface PrevArrowProps {
 
 export default function PrevArrow({ onClick, slidesToShow }: PrevArrowProps) {
   return (
-    <div className={`${slidesToShow === 1 ? 'prev-arrow-main-slider' : 'prev-arrow'}`} onClick={onClick}>
-      <BsChevronLeft />
+    <div
+      className={`${slidesToShow === 1 || slidesToShow === 3 ? 'prev-arrow-main-slider' : 'prev-arrow'}`}
+      onClick={onClick}
+    >
+      <BsChevronLeft className="drop-shadow-[-4px_6px_1px_rgba(0,0,0,0.4)]" />
     </div>
   );
 }

@@ -145,7 +145,7 @@ function CardSlider({ autoplay = true, speed = 300, loop = true, items, slidesTo
               ) : slidesToShow === 2 ? (
                 <div className={`${item.id % 2 === 0 ? 'dark_opacity' : 'dark_opacity2'}`} />
               ) : (
-                <></>
+                <div className="dark_opacity_best_products" />
               )}
 
               {slidesToShow === 1 ? (
@@ -167,8 +167,8 @@ function CardSlider({ autoplay = true, speed = 300, loop = true, items, slidesTo
                 </div>
               ) : (
                 <div className="desc_wrap_best_products">
-                  <h1 className="desc_h1">{item.title}</h1>
-                  <p className="desc_p">{item.desc}</p>
+                  <h1 className="desc_h1_best_products">{item.title}</h1>
+                  <p className="desc_p_best_products">{item.desc}</p>
                 </div>
               )}
             </div>

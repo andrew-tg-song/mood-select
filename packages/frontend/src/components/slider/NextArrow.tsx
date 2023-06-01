@@ -10,8 +10,11 @@ interface NextArrowProps {
 
 export default function NextArrow({ onClick, slidesToShow }: NextArrowProps) {
   return (
-    <div className={`${slidesToShow === 1 ? 'next-arrow-main-slider' : 'next-arrow'}`} onClick={onClick}>
-      <BsChevronRight />
+    <div
+      className={`${slidesToShow === 1 || slidesToShow === 3 ? 'next-arrow-main-slider' : 'next-arrow'}`}
+      onClick={onClick}
+    >
+      <BsChevronRight className="drop-shadow-[-4px_6px_1px_rgba(0,0,0,0.4)]" />
     </div>
   );
 }

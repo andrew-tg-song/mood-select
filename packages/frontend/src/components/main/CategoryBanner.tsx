@@ -16,7 +16,7 @@ const CategoryBanner = (): JSX.Element => {
     },
     {
       id: 2,
-      image: 'https://atimg.sonyunara.com/files/attrangs/goods/153872/1684940318_3.jpg',
+      image: 'https://atimg.sonyunara.com/files/attrangs/goods/153230/64672e59446ff.jpg',
       title: 'CARDIGAN',
       desc: '어디서든 산뜻하게',
     },
