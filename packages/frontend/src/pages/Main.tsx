@@ -88,7 +88,7 @@ export default function Main() {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className={`${darkMode === 'light' ? 'bg-white text-black' : 'bg-[#0f0f0f] text-white'}`}>
+    <div className={`${darkMode === 'light' ? 'bg-white text-black' : 'bg-[#0f0f0f] text-white'} pb-[140px]`}>
       <MainSlider />
       <CategoryBanner />
       <EventBanner eventBannerImg={eventBannerImg} />
@@ -98,6 +98,7 @@ export default function Main() {
         <NewProducts products={products} />
         <TodayDeliveryProduct products={products} />
       </div>
+      <EventBanner eventBannerImg={eventBannerImg} />
     </div>
   );
 }

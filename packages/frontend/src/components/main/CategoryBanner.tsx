@@ -29,7 +29,7 @@ const CategoryBanner = (): JSX.Element => {
   ];
 
   return (
-    <div className="w-[81.25rem] mx-auto pt-[8.75rem]">
+    <div className="w-[81.25rem] mx-auto pt-[8.75rem] mb-[140px]">
       <CardSlider items={items} slidesToShow={2} slidesToScroll={2} />
     </div>
   );

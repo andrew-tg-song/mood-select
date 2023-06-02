@@ -1,4 +1,6 @@
+import Button from '../Button';
 import CardSlider from '../slider/CardSlider';
+import Title from '../slider/Title';
 
 interface product {
   color?: string[];
@@ -17,12 +19,11 @@ interface ProductsProps {
 export default function TodayDeliveryProduct({ products }: ProductsProps) {
   return (
     <div>
-      <div className="flex flex-row items-end">
-        <h1 className="text-[1.75rem] text-[#282828]">오늘 출발 제품.</h1>
-        <p className="text-[1rem] text-[#A6A6A6] ml-[1.875rem]">빠르게 고객님을 찾아갑니다.</p>
-      </div>
+      <Title text1="오늘 출발 제품." text2="빠르게 고객님을 찾아갑니다." />
 
       <CardSlider products={products} slidesToShow={4} slidesToScroll={4} />
+
+      <Button value="MORE VIEW" />
     </div>
   );
 }

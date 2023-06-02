@@ -75,7 +75,7 @@ function CardSlider({
           width: '100%',
           position: 'absolute',
           bottom: '-12px',
-          display: slidesToShow === 1 || slidesToShow === 3 ? 'none' : 'flex',
+          display: slidesToShow === 1 || slidesToShow === 3 || slidesToShow === 4 ? 'none' : 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}
@@ -93,7 +93,9 @@ function CardSlider({
           ? 'slider_wrapper_main_slider'
           : slidesToShow === 2
           ? 'slider_wrapper'
-          : 'slider_wrapper_best_products'
+          : slidesToShow === 3
+          ? 'slider_wrapper_best_products'
+          : 'slider_wrapper_today_delivery_products'
       }`}
     >
       {items ? (

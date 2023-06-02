@@ -1,4 +1,5 @@
 import CardSlider from '../slider/CardSlider';
+import Title from '../slider/Title';
 
 export default function BestProductRecommendation() {
   const items = [
@@ -37,10 +38,7 @@ export default function BestProductRecommendation() {
   return (
     <div className="w-[100%] bg-[#1d1d1d]">
       <div className="w-[81.25rem] mx-auto py-[90px]">
-        <div className="flex flex-row items-end">
-          <h1 className="text-[1.75rem] text-white">베스트 제품.</h1>
-          <p className="text-[1rem] text-[#A6A6A6] ml-[1.875rem]">고객님의 마음을 두드릴 베스트 제품을 소개합니다.</p>
-        </div>
+        <Title text1="베스트 제품." text2="고객님의 마음을 두드릴 베스트 제품을 소개합니다." />
 
         <CardSlider items={items} slidesToShow={3} slidesToScroll={3} />
       </div>
