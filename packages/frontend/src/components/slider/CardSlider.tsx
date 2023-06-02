@@ -7,12 +7,23 @@ import 'slick-carousel/slick/slick-theme.css';
 import NextArrow from './NextArrow';
 import PrevArrow from './PrevArrow';
 import { DarkModeContext } from '../../context/DarkModeContext';
+import Product from '../product/Product';
 
 interface ObjectProps {
   id: number;
   image: string;
   title: string;
   desc: string;
+}
+
+interface ProductProps {
+  color?: string[];
+  image?: string;
+  title?: string;
+  desc?: string;
+  price?: number;
+  salePrice?: number;
+  banner?: string[];
 }
 
 interface sliderProps {
@@ -30,9 +41,19 @@ interface sliderProps {
   slidesToScroll?: number;
 
   items?: ObjectProps[];
+
+  products?: ProductProps[];
 }
 
-function CardSlider({ autoplay = true, speed = 300, loop = true, items, slidesToShow, slidesToScroll }: sliderProps) {
+function CardSlider({
+  autoplay = true,
+  speed = 300,
+  loop = true,
+  items,
+  slidesToShow,
+  slidesToScroll,
+  products,
+}: sliderProps) {
   const { darkMode } = useContext(DarkModeContext);
 
   const settings = {
@@ -75,54 +96,66 @@ function CardSlider({ autoplay = true, speed = 300, loop = true, items, slidesTo
           : 'slider_wrapper_best_products'
       }`}
     >
-      <Slider {...settings}>
-        {items?.map((item) => {
-          return (
-            <div
-              key={item.id}
-              className={`${
-                slidesToShow === 1
-                  ? 'personal_slider_main_slider'
-                  : slidesToShow === 2
-                  ? 'personal_slider'
-                  : 'personal_slider_best_products'
-              }`}
-            >
-              {slidesToShow === 1 ? (
-                <div className="dark_opacity_main_slider" />
-              ) : slidesToShow === 2 ? (
-                <div className={`${item.id % 2 === 0 ? 'dark_opacity' : 'dark_opacity2'}`} />
-              ) : (
-                <div className="dark_opacity_best_products" />
-              )}
+      {items ? (
+        <>
+          <Slider {...settings}>
+            {items?.map((item) => {
+              return (
+                <div
+                  key={item.id}
+                  className={`${
+                    slidesToShow === 1
+                      ? 'personal_slider_main_slider'
+                      : slidesToShow === 2
+                      ? 'personal_slider'
+                      : 'personal_slider_best_products'
+                  }`}
+                >
+                  {slidesToShow === 1 ? (
+                    <div className="dark_opacity_main_slider" />
+                  ) : slidesToShow === 2 ? (
+                    <div className={`${item.id % 2 === 0 ? 'dark_opacity' : 'dark_opacity2'}`} />
+                  ) : (
+                    <div className="dark_opacity_best_products" />
+                  )}
 
-              {slidesToShow === 1 ? (
-                <img className="main_slider_img" src={item.image} />
-              ) : slidesToShow === 2 ? (
-                <img className={`${item.id % 2 === 0 ? 'slider_img' : 'slider_img2'}`} src={item.image} />
-              ) : (
-                <img className="best_products_slider_img" src={item.image} />
-              )}
+                  {slidesToShow === 1 ? (
+                    <img className="main_slider_img" src={item.image} />
+                  ) : slidesToShow === 2 ? (
+                    <img className={`${item.id % 2 === 0 ? 'slider_img' : 'slider_img2'}`} src={item.image} />
+                  ) : (
+                    <img className="best_products_slider_img" src={item.image} />
+                  )}
 
-              {slidesToShow === 1 ? (
-                <div className="desc_wrap_main_slider">
-                  <h1 className="desc_h1_main_slider">{item.title}</h1>
+                  {slidesToShow === 1 ? (
+                    <div className="desc_wrap_main_slider">
+                      <h1 className="desc_h1_main_slider">{item.title}</h1>
+                    </div>
+                  ) : slidesToShow === 2 ? (
+                    <div className="desc_wrap">
+                      <h1 className="desc_h1">{item.title}</h1>
+                      <p className="desc_p">{item.desc}</p>
+                    </div>
+                  ) : (
+                    <div className="desc_wrap_best_products">
+                      <h1 className="desc_h1_best_products">{item.title}</h1>
+                      <p className="desc_p_best_products">{item.desc}</p>
+                    </div>
+                  )}
                 </div>
-              ) : slidesToShow === 2 ? (
-                <div className="desc_wrap">
-                  <h1 className="desc_h1">{item.title}</h1>
-                  <p className="desc_p">{item.desc}</p>
-                </div>
-              ) : (
-                <div className="desc_wrap_best_products">
-                  <h1 className="desc_h1_best_products">{item.title}</h1>
-                  <p className="desc_p_best_products">{item.desc}</p>
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </Slider>
+              );
+            })}
+          </Slider>
+        </>
+      ) : (
+        <>
+          <Slider {...settings}>
+            {products?.map((product) => {
+              return <Product product={product} />;
+            })}
+          </Slider>
+        </>
+      )}
     </div>
   );
 }

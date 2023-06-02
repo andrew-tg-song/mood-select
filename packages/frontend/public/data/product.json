@@ -1,0 +1,39 @@
+[
+  {
+    "main_slider": [
+      { "image": "./img/main_slider_img.png", "title": "원하는 MOOD로, 이제는 우리가 골라줄게." },
+      { "image": "./img/main_slider_img.png", "title": "당신의 더욱 더 돋보이게 만들어줄게." },
+      { "image": "./img/main_slider_img.png", "title": "옷 고르는 재미를 두 배로!" }
+    ],
+
+    "category_banner": [
+      {
+        "image": "./img/category_banner_1.png",
+        "title": "PANTS",
+        "desc": "언제 어디서든 편안하게"
+      },
+      {
+        "image": "./img/category_banner_2.png",
+        "title": "ONE PIECE",
+        "desc": "어디서든 나를 돋보이게"
+      },
+      {
+        "image": "./img/category_banner_3.png",
+        "title": "CARDIGAN",
+        "desc": "어디서든 산뜻하게"
+      },
+      {
+        "image": "./img/category_banner_4.png",
+        "title": "T-SHIRT",
+        "desc": "꾸민듯 안 꾸민듯 자연스럽게"
+      }
+    ],
+
+    "event_banner": { "image": "./img/event_banner.png" },
+
+    "best_products": {
+      "image": "./img/best_product_1.png",
+      "title": "오엘루 "
+    }
+  }
+]
