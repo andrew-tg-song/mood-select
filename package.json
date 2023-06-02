@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "lint": "lerna run lint",
     "format": "prettier -w .",
     "start": "lerna run start",
