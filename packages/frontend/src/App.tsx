@@ -10,6 +10,10 @@ import MyPage from './pages/MyPage';
 import Order from './pages/Order';
 import WishList from './pages/WishList';
 
+// import useProducts from './hooks/use-products';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -32,6 +36,17 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  // const [isLoading, error, products] = useProducts();
+  // console.log(products);
+  const {
+    isLoading,
+    error,
+    data: products,
+  } = useQuery(['products'], () => axios('../public/data/product.json').then((res) => res.data));
+  console.log(products);
+
+  if (isLoading) return 'Loading...';
+  if (error) return 'error가 발생했습니다!';
   return <RouterProvider router={router} />;
 }
 
