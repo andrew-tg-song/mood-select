@@ -46,7 +46,7 @@ function App(): JSX.Element {
     isLoading,
     error,
     data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
+  } = useQuery(['products'], async () => search(name), { staleTime: 1000 * 60 * 5 });
   console.log(products);
 
   if (isLoading) return <p>'Loading...'</p>;

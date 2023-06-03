@@ -39,12 +39,8 @@ export default function BestProductRecommendation() {
 
   const name = 'BEST';
 
-  const {
-    isLoading,
-    error,
-    data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
-  console.log(products);
+  const { isLoading, error, data } = useQuery(['products'], async () => search(name), { staleTime: 1000 * 60 * 5 });
+  console.log(data);
 
   return (
     <div className="w-[100%] bg-[#1d1d1d]">

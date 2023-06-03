@@ -54,7 +54,7 @@ export default function QuickMenu({ contentRef }: QuickMenuPropsType) {
     return () => window.removeEventListener('scroll', handleShowButton);
   }, []);
 
-  console.log(scrollY);
+  // console.log(scrollY);
 
   return (
     <div

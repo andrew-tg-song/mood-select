@@ -40,13 +40,13 @@ function App(): JSX.Element {
   // const [isLoading, error, products] = useProducts();
   // console.log(products);
 
-  const name = 'ALL';
+  const name = 'all';
 
   const {
     isLoading,
     error,
     data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
+  } = useQuery(['products'], async () => search(name), { staleTime: 1000 * 60 * 5 });
   console.log(products);
 
   if (isLoading) return <p>'Loading...'</p>;

@@ -13,7 +13,6 @@ import WishList from './pages/WishList';
 // import useProducts from './hooks/use-products';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import { search } from './ShoppingMallProducts';
 
 const router = createBrowserRouter([
   {
@@ -39,14 +38,17 @@ const router = createBrowserRouter([
 function App(): JSX.Element {
   // const [isLoading, error, products] = useProducts();
   // console.log(products);
-
-  const name = 'ALL';
-
   const {
     isLoading,
     error,
     data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
+  } = useQuery(
+    ['products'],
+    async () => {
+      return axios('../public/data/product.json').then((res) => res.data[0].main_slider);
+    },
+    { staleTime: 1000 * 60 * 5 }
+  );
   console.log(products);
 
   if (isLoading) return <p>'Loading...'</p>;

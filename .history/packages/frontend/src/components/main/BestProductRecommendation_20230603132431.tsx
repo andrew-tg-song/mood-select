@@ -43,7 +43,7 @@ export default function BestProductRecommendation() {
     isLoading,
     error,
     data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
+  } = useQuery(['products' name], async () => search(name), { staleTime: 1000 * 60 * 5 });
   console.log(products);
 
   return (

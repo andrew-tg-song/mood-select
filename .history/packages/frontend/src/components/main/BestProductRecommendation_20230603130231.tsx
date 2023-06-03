@@ -37,13 +37,13 @@ export default function BestProductRecommendation() {
     },
   ];
 
-  const name = 'BEST';
+  const name = 'MAINSLIDER';
 
   const {
     isLoading,
     error,
     data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
+  } = useQuery(['products'], async () => search(name), { staleTime: 1000 * 60 * 5 });
   console.log(products);
 
   return (

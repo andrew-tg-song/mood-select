@@ -1,7 +1,5 @@
-import { search } from '../../ShoppingMallProducts';
 import CardSlider from '../slider/CardSlider';
 import Title from '../slider/Title';
-import { useQuery } from '@tanstack/react-query';
 
 export default function BestProductRecommendation() {
   const items = [
@@ -37,14 +35,7 @@ export default function BestProductRecommendation() {
     },
   ];
 
-  const name = 'BEST';
-
-  const {
-    isLoading,
-    error,
-    data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
-  console.log(products);
+  const name: string = 'BEST';
 
   return (
     <div className="w-[100%] bg-[#1d1d1d]">
