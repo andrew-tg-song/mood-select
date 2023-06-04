@@ -9,8 +9,9 @@ import { Repository } from 'typeorm';
 export class UsersService {
   constructor(@InjectRepository(User) private userRepository: Repository<User>) {}
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   create(createUserDto: CreateUserDto) {
-    this.userRepository.save({ name: 'Andrew' })
+    this.userRepository.save({ name: 'Andrew' });
     return 'This action adds a new user';
   }
 
@@ -22,6 +23,7 @@ export class UsersService {
     return this.userRepository.findOne({ where: { id } });
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   update(id: number, updateUserDto: UpdateUserDto) {
     return `This action updates a #${id} user`;
   }
