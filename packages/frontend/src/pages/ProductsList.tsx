@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { DarkModeContext } from '../context/DarkModeContext';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { search } from '../ShoppingMallProducts';
 import Product from '../components/product/Product';
 import ProductNav from '../components/product/ProductNav';
@@ -11,6 +11,8 @@ export default function ProductsList() {
 
   const { listName, kind } = useParams();
   console.log(listName, kind);
+
+  const navigate = useNavigate();
 
   const name = 'PRODUCTS';
 
@@ -30,7 +32,15 @@ export default function ProductsList() {
           <>
             {products?.map((product) => {
               if (product.typeA === listName) {
-                return <Product product={product} />;
+                return (
+                  <Product
+                    key={product.id}
+                    product={product}
+                    onClick={() => {
+                      navigate(`/detail/${product.id}`);
+                    }}
+                  />
+                );
               }
             })}
           </>
@@ -38,7 +48,15 @@ export default function ProductsList() {
           <>
             {products?.map((product) => {
               if (product.typeB === kind) {
-                return <Product product={product} />;
+                return (
+                  <Product
+                    key={product.id}
+                    product={product}
+                    onClick={() => {
+                      navigate(`/detail/${product.id}`);
+                    }}
+                  />
+                );
               }
             })}
           </>

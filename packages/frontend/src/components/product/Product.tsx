@@ -8,15 +8,16 @@ interface ProductProps {
     salePrice?: number;
     banner?: string[];
   };
+  onClick(): void;
 }
 
 const truncate = (str, n) => {
   return str.length > n ? str.substring(0, n - 1) + '...' : str;
 };
 
-export default function Product({ product }: ProductProps) {
+export default function Product({ product, onClick }: ProductProps) {
   return (
-    <div className="w-[19.375rem] bg-pink py-[20px] mb-[40px]">
+    <div onClick={onClick} className="w-[19.375rem] bg-pink py-[20px] mb-[40px]">
       <div className="w-[19.375rem] h-[430px] bg-[#d9d9d9] ">
         <img className="w-[100%] h-[100%] object-cover" src={product.image} />
       </div>
