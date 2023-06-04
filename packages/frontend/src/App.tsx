@@ -13,7 +13,6 @@ import ProductsList from './pages/ProductsList';
 import NewProductsList from './pages/NewProductsList';
 import BestProductsList from './pages/BestProductsList';
 import TodayDeliveryProductsList from './pages/TodayDeliveryProductsList';
-import List from './pages/List';
 
 // import useProducts from './hooks/use-products';
 

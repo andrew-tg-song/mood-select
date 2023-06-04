@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { DarkModeContext } from '../context/DarkModeContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { search } from '../ShoppingMallProducts';
-import Product from '../components/product/Product';
+import Product, { ProductType } from '../components/product/Product';
 import ProductNav from '../components/product/ProductNav';
 
 export default function ProductsList() {
@@ -16,11 +16,7 @@ export default function ProductsList() {
 
   const name = 'PRODUCTS';
 
-  const {
-    isLoading,
-    error,
-    data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
+  const { data: products } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
   console.log(products);
 
   return (
@@ -30,7 +26,7 @@ export default function ProductsList() {
 
         {kind === undefined || kind === 'ALL' ? (
           <>
-            {products?.map((product) => {
+            {products?.map((product: ProductType) => {
               if (product.typeA === listName) {
                 return (
                   <Product
@@ -46,7 +42,7 @@ export default function ProductsList() {
           </>
         ) : (
           <>
-            {products?.map((product) => {
+            {products?.map((product: ProductType) => {
               if (product.typeB === kind) {
                 return (
                   <Product

@@ -1,17 +1,24 @@
-interface ProductProps {
-  product: {
-    color?: string[];
-    image?: string;
-    title?: string;
-    desc?: string;
-    price?: number;
-    salePrice?: number;
-    banner?: string[];
-  };
+export interface ProductType {
+  id: string;
+  typeA?: string;
+  typeB?: string;
+  color?: string[];
+  image?: string;
+  title: string;
+  desc: string;
+  price?: number;
+  salePrice?: number;
+  banner?: string[];
+  best?: boolean;
+  new?: boolean;
+}
+
+export interface ProductProps {
+  product: ProductType;
   onClick(): void;
 }
 
-const truncate = (str, n) => {
+const truncate = (str: string, n: number) => {
   return str.length > n ? str.substring(0, n - 1) + '...' : str;
 };
 

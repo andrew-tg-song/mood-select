@@ -8,9 +8,11 @@ import EventBanner2 from '../components/main/EventBanner2';
 import BestProductRecommendation from '../components/main/BestProductRecommendation';
 import NewProducts from '../components/main/NewProducts';
 import TodayDeliveryProduct from '../components/main/TodayDeliveryProduct';
+import { ProductType } from '../components/product/Product';
 
-const products = [
+const products: ProductType[] = [
   {
+    id: '1',
     color: ['black', 'ivory', 'pink'],
     image: 'https://ririnco.com/web/product/big/202305/4599a30ba1f8752d2c1e5aa86a2c57b8.jpg',
     title: '브릿느 배색 세미크롭 퍼프 자켓1',
@@ -20,6 +22,7 @@ const products = [
     banner: ['BEST', 'NEW', '무료 배송'],
   },
   {
+    id: '2',
     color: ['black', 'white'],
     image: 'https://ririnco.com/web/product/big/202304/22e3df3f4acf5aecebce4e37a9e158cd.jpg',
     title: '[웨딩룩] 웨린브 하트넥 머메이드 롱 원피스2',
@@ -29,6 +32,7 @@ const products = [
     banner: ['BEST', 'NEW', '무료 배송'],
   },
   {
+    id: '3',
     color: ['ivory', 'pink', 'black'],
     image: 'https://atimg.sonyunara.com/files/attrangs/goods/152990/646330cba214e.jpg',
     title: '(데일리필수템/세미크롭기장) 모이 코튼 세미크롭 무지 반팔티3',
@@ -38,6 +42,7 @@ const products = [
     banner: ['BEST', 'NEW', '무료 배송'],
   },
   {
+    id: '4',
     color: ['black', 'white'],
     image: 'https://ririnco.com/web/product/big/202304/22e3df3f4acf5aecebce4e37a9e158cd.jpg',
     title: '[웨딩룩] 웨린브 하트넥 머메이드 롱 원피스4',
@@ -47,6 +52,7 @@ const products = [
     banner: ['BEST', 'NEW', '무료 배송'],
   },
   {
+    id: '5',
     color: ['black', 'ivory', 'pink'],
     image: 'https://ririnco.com/web/product/big/202305/4599a30ba1f8752d2c1e5aa86a2c57b8.jpg',
     title: '브릿느 배색 세미크롭 퍼프 자켓5',
@@ -56,6 +62,7 @@ const products = [
     banner: ['BEST', 'NEW', '무료 배송'],
   },
   {
+    id: '6',
     color: ['black', 'ivory'],
     image: 'https://ririnco.com/web/product/big/202304/a39fc3862eeadb121442ad993c3a65a7.jpg',
     title: '레나잇 포켓 뒷밴딩 미니 스커트6',
@@ -65,6 +72,7 @@ const products = [
     banner: ['BEST', 'NEW', '무료 배송'],
   },
   {
+    id: '7',
     color: ['black', 'ivory', 'pink'],
     image: 'https://ririnco.com/web/product/big/202305/4599a30ba1f8752d2c1e5aa86a2c57b8.jpg',
     title: '브릿느 배색 세미크롭 퍼프 자켓7',
@@ -74,6 +82,7 @@ const products = [
     banner: ['BEST', 'NEW', '무료 배송'],
   },
   {
+    id: '8',
     color: ['black', 'ivory', 'pink'],
     image: 'https://ririnco.com/web/product/big/202305/4599a30ba1f8752d2c1e5aa86a2c57b8.jpg',
     title: '브릿느 배색 세미크롭 퍼프 자켓8',

@@ -9,37 +9,35 @@ export default function ProductNav() {
 
   const name = 'NAV';
 
-  const {
-    isLoading,
-    error,
-    data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
+  const { data: products } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
   console.log(products);
 
   return (
     <div>
       <ul className="flex items-center justify-center mx-auto ">
-        {products?.map((product) => {
-          if (product.type === listName) {
-            return (
-              <>
-                {product?.kind?.map((k, i) => {
-                  return (
-                    <li key={i} className="mr-[1rem]">
-                      <input
-                        type="button"
-                        value={k}
-                        onClick={() => {
-                          navigate(`/list/${listName}/${k}`);
-                        }}
-                      />
-                    </li>
-                  );
-                })}
-              </>
-            );
+        {products?.map(
+          (product: { type: string | undefined; kind: (string | number | readonly string[] | undefined)[] }) => {
+            if (product.type === listName) {
+              return (
+                <>
+                  {product?.kind?.map((k, i) => {
+                    return (
+                      <li key={i} className="mr-[1rem]">
+                        <input
+                          type="button"
+                          value={k}
+                          onClick={() => {
+                            navigate(`/list/${listName}/${k}`);
+                          }}
+                        />
+                      </li>
+                    );
+                  })}
+                </>
+              );
+            }
           }
-        })}
+        )}
       </ul>
     </div>
   );
