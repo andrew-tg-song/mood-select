@@ -8,7 +8,7 @@ on:
     branches: [ "*" ]
 
 jobs:
-  integration:
+  pr_integration:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
