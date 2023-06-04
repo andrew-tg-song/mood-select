@@ -12,8 +12,8 @@ import { useNavigate } from 'react-router-dom';
 export default function NavBar() {
   const navigate = useNavigate();
 
-  const [cartCount, setCartCount] = useState(0);
-  const [wishCount, setWishCount] = useState(0);
+  const [cartCount] = useState(0);
+  const [wishCount] = useState(0);
 
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 

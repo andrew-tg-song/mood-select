@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function TopEventBanner() {
   return (
     <div className="w-[100%] h-[40px] bg-black flex justify-center items-center">

@@ -1,29 +1,19 @@
 // export default CardSlider;
 import Slider from 'react-slick';
-import { useContext } from 'react';
+import { ReactNode, useContext } from 'react';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import NextArrow from './NextArrow';
 import PrevArrow from './PrevArrow';
 import { DarkModeContext } from '../../context/DarkModeContext';
-import Product from '../product/Product';
+import Product, { ProductType } from '../product/Product';
 
 interface ObjectProps {
   id: number;
   image: string;
   title: string;
   desc: string;
-}
-
-interface ProductProps {
-  color?: string[];
-  image?: string;
-  title?: string;
-  desc?: string;
-  price?: number;
-  salePrice?: number;
-  banner?: string[];
 }
 
 interface sliderProps {
@@ -42,7 +32,7 @@ interface sliderProps {
 
   items?: ObjectProps[];
 
-  products?: ProductProps[];
+  products?: ProductType[];
 }
 
 function CardSlider({
@@ -69,7 +59,7 @@ function CardSlider({
     autoplaySpeed: typeof autoplay === 'boolean' ? 3000 : autoplay,
     nextArrow: <NextArrow slidesToShow={slidesToShow} />,
     prevArrow: <PrevArrow slidesToShow={slidesToShow} />,
-    appendDots: (dots: any) => (
+    appendDots: (dots: ReactNode) => (
       <div
         style={{
           width: '100%',
@@ -151,7 +141,7 @@ function CardSlider({
         <>
           <Slider {...settings}>
             {products?.map((product, idx) => {
-              return <Product product={product} key={idx} />;
+              return <Product product={product} key={idx} onClick={() => void 0} />;
             })}
           </Slider>
         </>

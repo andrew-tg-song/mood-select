@@ -7,7 +7,7 @@ type ContextType = {
 
 export const DarkModeContext = React.createContext<ContextType>({
   darkMode: 'dark',
-  toggleDarkMode: () => {},
+  toggleDarkMode: () => void 0,
 });
 
 export const DarkModeProvider = ({ children }: { children: React.ReactNode }): JSX.Element => {

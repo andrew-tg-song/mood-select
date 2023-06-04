@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { DarkModeContext } from '../context/DarkModeContext';
 import darkLogo from '../assets/logo.png';
 import lightLogo from '../assets/logo2.png';

@@ -1,22 +1,30 @@
-interface ProductProps {
-  product: {
-    color?: string[];
-    image?: string;
-    title?: string;
-    desc?: string;
-    price?: number;
-    salePrice?: number;
-    banner?: string[];
-  };
+export interface ProductType {
+  id: string;
+  typeA?: string;
+  typeB?: string;
+  color?: string[];
+  image?: string;
+  title: string;
+  desc: string;
+  price?: number;
+  salePrice?: number;
+  banner?: string[];
+  best?: boolean;
+  new?: boolean;
 }
 
-const truncate = (str, n) => {
+export interface ProductProps {
+  product: ProductType;
+  onClick(): void;
+}
+
+const truncate = (str: string, n: number) => {
   return str.length > n ? str.substring(0, n - 1) + '...' : str;
 };
 
-export default function Product({ product }: ProductProps) {
+export default function Product({ product, onClick }: ProductProps) {
   return (
-    <div className="w-[19.375rem] bg-pink py-[20px] mb-[40px]">
+    <div onClick={onClick} className="w-[19.375rem] bg-pink py-[20px] mb-[40px]">
       <div className="w-[19.375rem] h-[430px] bg-[#d9d9d9] ">
         <img className="w-[100%] h-[100%] object-cover" src={product.image} />
       </div>

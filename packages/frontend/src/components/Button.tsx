@@ -7,7 +7,7 @@ interface ButtonProps {
 export default function Button({ value }: ButtonProps) {
   return (
     <button
-      onClick={() => {}}
+      onClick={() => void 0}
       className="w-[12.5rem] h-[60px] bg-[#000000] mx-auto flex justify-center items-center rounded-full text-[white] text-[0.875rem] font-light"
     >
       {value}

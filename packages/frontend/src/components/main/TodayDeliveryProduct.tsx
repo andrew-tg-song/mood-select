@@ -1,19 +1,10 @@
 import Button from '../Button';
+import { ProductType } from '../product/Product';
 import CardSlider from '../slider/CardSlider';
 import Title from '../slider/Title';
 
-interface product {
-  color?: string[];
-  image?: string;
-  title?: string;
-  desc?: string;
-  price?: number;
-  salePrice?: number;
-  banner?: string[];
-}
-
 interface ProductsProps {
-  products: product[];
+  products: ProductType[];
 }
 
 export default function TodayDeliveryProduct({ products }: ProductsProps) {
