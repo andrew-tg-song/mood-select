@@ -4,6 +4,10 @@ export interface ProductType {
   typeB?: string;
   color?: string[];
   image?: string;
+  image2?: string;
+  image3?: string;
+  image4?: string;
+  image5?: string;
   title: string;
   desc: string;
   price?: number;
