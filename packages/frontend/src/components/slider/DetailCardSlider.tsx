@@ -23,7 +23,7 @@ export default function DetailCardSlider({ img1, img2, img3, img4, img5 }: ImgTy
       );
     },
     dots: true,
-    dotsClass: 'slick-dots slick-thumb',
+    dotsClass: 'slick-dots2 slick-thumb2',
     infinite: true,
     autoplay: true,
     speed: 500,
@@ -33,7 +33,7 @@ export default function DetailCardSlider({ img1, img2, img3, img4, img5 }: ImgTy
     nextArrow: <NextArrow type={type} />,
   };
   return (
-    <div className="w-[50%] relative">
+    <div className="w-[50%] relative detail-card-slider">
       <Slider {...settings}>
         <div>
           <img src={img1} />

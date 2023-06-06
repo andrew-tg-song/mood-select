@@ -87,7 +87,11 @@
         "id": "d9034ccb-9d3a-48c9-b38c-7f8b5027a1b9",
         "title": "브릿느 배색 세미크롭 퍼프 자켓1",
         "desc": "세미크롭에 퍼프소매, 배색 바인딩으로 포인트를 준 여성스러운 자켓 :)",
-        "color": ["black", "ivory", "pink"],
+        "color": [
+          { "name": "black", "image": "/img/color-black.png" },
+          { "name": "ivory", "image": "/img/color-ivory.png" },
+          { "name": "pink", "image": "/img/color-pink.png" }
+        ],
         "image": "./img/new_product_1.png",
         "price": 41000,
         "salePrice": 37620,
@@ -97,7 +101,10 @@
         "id": "da597cb8-85d9-4c4d-811f-5f10f7eb3545",
         "title": "[웨딩룩] 웨린브 하트넥 머메이드 롱 원피스2",
         "desc": "머메이드 라인으로 고급스러운 무드의 셀프 웨딩,브라이덜 샤워, 돌잔치 등 다양한 상황에 맞게 착용하기 좋아 강추드린답니다",
-        "color": ["black", "white"],
+        "color": [
+          { "name": "black", "image": "/img/color-black.png" },
+          { "name": "white", "image": "/img/color-white.png" }
+        ],
         "image": "./img/new_product_2.png",
         "price": 44900,
         "salePrice": 40410,
@@ -108,7 +115,11 @@
         "image": "./img/best_product_2.png",
         "title": "로앤브 세미크롭 투웨이 세일러카라 집업",
         "desc": "세미크롭에 투웨이 디테일로 다양하게 연출하기 좋으며 소재까지 부드럽답니다 :)",
-        "color": ["black", "ivory", "pink"],
+        "color": [
+          { "name": "ivory", "image": "/img/color-ivory.png" },
+          { "name": "pink", "image": "/img/color-pink.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 41000,
         "salePrice": 37620,
         "banner": ["NEW", "무료 배송"]
@@ -118,7 +129,10 @@
         "image": "./img/new_product_3.png",
         "title": "히크네린 트위드 크롭 뒷밴딩 투피스 세트",
         "desc": "러블리한 무드가 가득한 트위드 투피스에요 하객룩, 데이트룩 등 다양하게 코디하기 좋아요 :)",
-        "color": ["black", "pink"],
+        "color": [
+          { "name": "pink", "image": "/img/color-pink.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 63900,
         "salePrice": 57510,
         "banner": ["BEST", "NEW"]
@@ -128,7 +142,10 @@
         "image": "./img/new_product_4.png",
         "title": "티런브 배색 니트 가디건 나시 투피스 세트",
         "desc": "세미 크롭 길이감과 내추럴한 핏으로 깔끔하게 착용하기 좋은 아이템이에요 :)",
-        "color": ["black", "pink"],
+        "color": [
+          { "name": "pink", "image": "/img/color-pink.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 63900,
         "salePrice": 57510,
         "banner": ["BEST", "NEW", "무료 배송"]
@@ -138,7 +155,10 @@
         "image": "./img/best_product_4.png",
         "title": "베티론 플리츠 뷔스티에 롱 원피스 (끈조절)",
         "desc": "플리츠 스커트에 뷔스티에 디테일로 여성스럽게 연출하기 좋은 원피스 :)",
-        "color": ["black", "yello"],
+        "color": [
+          { "name": "yellow", "image": "/img/color-yellow.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 59100,
         "salePrice": 42500,
         "banner": ["NEW", "무료 배송"]
@@ -148,7 +168,10 @@
         "image": "./img/new_product_5.png",
         "title": "레나잇 포켓 뒷밴딩 미니 스커트6",
         "desc": "데일리한 매력의 귀여운 미니기장의 스커트에요 :)",
-        "color": ["white", "ivory"],
+        "color": [
+          { "name": "ivory", "image": "/img/color-ivory.png" },
+          { "name": "white", "image": "/img/color-white.png" }
+        ],
         "price": 19550,
         "salePrice": 17540,
         "banner": ["BEST", "NEW", "무료 배송"]
@@ -158,7 +181,10 @@
         "image": "./img/new_product_6.png",
         "title": "로디몰리 레터링 나시 볼레로 투피스 세트",
         "desc": "하트 레터링 디자인으로 키치한 무드로 입기 좋은 투피스 세트에요 :)",
-        "color": ["white", "black"],
+        "color": [
+          { "name": "white", "image": "/img/color-white.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 38800,
         "salePrice": 34920,
         "banner": ["BEST", "NEW", "무료 배송"]
@@ -171,7 +197,10 @@
         "image": "./img/best_product_3.png",
         "title": "히크네린 트위드 크롭 뒷밴딩 투피스 세트",
         "desc": "러블리한 무드가 가득한 트위드 투피스에요 하객룩, 데이트룩 등 다양하게 코디하기 좋아요 :)",
-        "color": ["black", "pink"],
+        "color": [
+          { "name": "pink", "image": "/img/color-pink.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 63900,
         "salePrice": 57510,
         "banner": ["BEST"]
@@ -181,7 +210,10 @@
         "image": "./img/best_product_6.png",
         "title": "로디몰리 레터링 나시 볼레로 투피스 세트",
         "desc": "하트 레터링 디자인으로 키치한 무드로 입기 좋은 투피스 세트에요 :)",
-        "color": ["white", "black"],
+        "color": [
+          { "name": "white", "image": "/img/color-white.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 38800,
         "salePrice": 34920,
         "banner": ["BEST", "NEW"]
@@ -191,7 +223,10 @@
         "image": "./img/today_delivery_product_1.png",
         "title": "앤유브 스판 배색 루즈핏 니트 나시",
         "desc": "루즈한 핏감과 배색 포인트로 데일리로 착용하기 좋은 나시에요 다양한 하의와 매치하기 좋아요 :)",
-        "color": ["black", "blue"],
+        "color": [
+          { "name": "blue", "image": "/img/color-blue.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 17900,
         "salePrice": 16100,
         "banner": ["BEST", "NEW", "무료 배송"]
@@ -201,7 +236,11 @@
         "image": "./img/today_delivery_product_2.png",
         "title": "리웨즈 니트 루즈핏 스퀘어넥 나시",
         "desc": "어디에나 잘 어울리는 니트 나시로 데일리템으로 추천드려요 :)",
-        "color": ["black", "ivory", "blue"],
+        "color": [
+          { "name": "ivory", "image": "/img/color-ivory.png" },
+          { "name": "blue", "image": "/img/color-blue.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 22800,
         "salePrice": 20520,
         "banner": ["무료 배송"]
@@ -211,7 +250,10 @@
         "image": "./img/today_delivery_product_3.png",
         "title": "펠로킹 체크 시스루 루즈핏 셔츠",
         "desc": "하늘하늘한 소재와 베이직한 디자인으로 활용도가 높은 셔츠 소개드려요:)",
-        "color": ["black", "blue"],
+        "color": [
+          { "name": "blue", "image": "/img/color-blue.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 26800,
         "salePrice": 24120,
         "banner": ["NEW", "무료 배송"]
@@ -221,7 +263,7 @@
         "image": "./img/today_delivery_product_4.png",
         "title": "로알빈 트위드 배색 크롭 자켓",
         "desc": "넥라인과 포켓 배색 디테일로 포인트를 더해주며 크롭한 기장감으로 롱한 레그 라인 연출이 된답니다 :)",
-        "color": ["black"],
+        "color": [{ "name": "black", "image": "/img/color-black.png" }],
         "price": 41500,
         "salePrice": 37350,
         "banner": ["BEST", "NEW", "무료 배송"]
@@ -231,7 +273,10 @@
         "image": "./img/today_delivery_product_5.png",
         "title": "로로블링 배색 가디건 나시 원피스 투피스 세트 (끈조절)",
         "desc": "배색 디자인의 가디건 + 원피스 세트로 러블리한 무드가 가득한 투피스에요 단독, 세트로 각각 활용도가 높답니다 :)",
-        "color": ["black", "ivory"],
+        "color": [
+          { "name": "ivory", "image": "/img/color-ivory.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 45900,
         "salePrice": 41310,
         "banner": ["무료 배송"]
@@ -241,7 +286,10 @@
         "image": "./img/today_delivery_product_6.png",
         "title": "슈어드리 플라워 레이스 뷔스티에 원피스 (끈조절)",
         "desc": "잔잔한 플라워 패턴과 레이스 디자인으로 여성스러움이 돋보이는 뷔스티에 원피스에요 :)",
-        "color": ["black", "ivory"],
+        "color": [
+          { "name": "ivory", "image": "/img/color-ivory.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 34900,
         "salePrice": 31140,
         "banner": ["BEST", "NEW"]
@@ -266,13 +314,19 @@
 
         "title": "펠로킹 체크 시스루 루즈핏 셔츠",
         "desc": "하늘하늘한 소재와 베이직한 디자인으로 활용도가 높은 셔츠 소개드려요:)",
-        "color": ["black", "blue"],
+        "color": [
+          { "name": "gray", "image": "/img/color-gray.png" },
+          { "name": "lavender", "image": "/img/color-lavender.png" },
+          { "name": "white", "image": "/img/color-white.png" },
+          { "name": "black", "image": "/img/color-black.png" },
+          { "name": "yellowgreen", "image": "/img/color-yellowgreen" }
+        ],
         "price": 26800,
         "salePrice": 24120,
         "banner": ["NEW", "무료 배송"],
         "option": { "size": ["44~88", "99~120(+1,000won)"] },
         "detail": {
-          "detailEventBanner": ["./img/detail_event_banner_1.png", "./img/detail_event_banner_2.png"],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
             "./img/detail_1-1.png",
             "./img/detail_1-2.png",
@@ -309,7 +363,13 @@
 
         "title": "퍼벨린 트위드 카라넥 롱 원피스",
         "desc": "고급스러운 트위드 소재의 맞주름 디테일로 체형커버도 가능한 롱 원피스에요 !",
-        "color": ["black", "pink"],
+        "color": [
+          { "name": "pink", "image": "/img/color-pink.png" },
+          { "name": "mint", "image": "/img/color-mint.png" },
+          { "name": "white", "image": "/img/color-white.png" },
+          { "name": "black", "image": "/img/color-black.png" },
+          { "name": "deeppink", "image": "/img/color-deeppink.png" }
+        ],
         "price": 52900,
         "salePrice": 47610,
         "banner": ["NEW", "BEST", "무료 배송"],
@@ -365,7 +425,12 @@
 
         "title": "페어리 날개소매 쉬폰 미니 원피스",
         "desc": "꽃잎결처럼 여리하게 떨어지는 소매와 스커트 실루엣",
-        "color": ["ivory", "plack"],
+        "color": [
+          { "name": "ivory", "image": "/img/color-ivory.png" },
+          { "name": "mint", "image": "/img/color-mint.png" },
+          { "name": "white", "image": "/img/color-white.png" },
+          { "name": "black", "image": "/img/color-black.png" }
+        ],
         "price": 70000,
         "salePrice": 49800,
         "banner": ["BEST", "무료 배송"],
