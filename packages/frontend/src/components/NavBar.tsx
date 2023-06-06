@@ -79,7 +79,7 @@ export default function NavBar() {
                 type="button"
                 value={title[0]}
                 onClick={() => {
-                  navigate(`/list/${title[0]}`);
+                  navigate(`/list/${encodeURIComponent(title[0])}`);
                 }}
               />
             </li>
@@ -88,7 +88,7 @@ export default function NavBar() {
                 type="button"
                 value={title[1]}
                 onClick={() => {
-                  navigate(`/list/${title[1]}`);
+                  navigate(`/list/${encodeURIComponent(title[1])}`);
                 }}
               />
             </li>
@@ -97,7 +97,7 @@ export default function NavBar() {
                 type="button"
                 value={title[2]}
                 onClick={() => {
-                  navigate(`/list/${title[2]}`);
+                  navigate(`/list/${encodeURIComponent(title[2])}`);
                 }}
               />
             </li>
@@ -106,7 +106,7 @@ export default function NavBar() {
                 type="button"
                 value={title[3]}
                 onClick={() => {
-                  navigate(`/list/${title[3]}`);
+                  navigate(`/list/${encodeURIComponent(title[3])}`);
                 }}
               />
             </li>
@@ -115,7 +115,7 @@ export default function NavBar() {
                 type="button"
                 value={title[4]}
                 onClick={() => {
-                  navigate(`/list/${title[4]}`);
+                  navigate(`/list/${encodeURIComponent(title[4])}`);
                 }}
               />
             </li>
@@ -124,7 +124,7 @@ export default function NavBar() {
                 type="button"
                 value={title[5]}
                 onClick={() => {
-                  navigate(`/list/${title[5]}`);
+                  navigate(`/list/${encodeURIComponent(title[5])}`);
                 }}
               />
             </li>
@@ -133,7 +133,7 @@ export default function NavBar() {
                 type="button"
                 value={title[6]}
                 onClick={() => {
-                  navigate(`/list/${title[6]}`);
+                  navigate(`/list/${encodeURIComponent(title[6])}`);
                 }}
               />
             </li>
@@ -142,7 +142,7 @@ export default function NavBar() {
                 type="button"
                 value={title[7]}
                 onClick={() => {
-                  navigate(`/list/${title[7]}`);
+                  navigate(`/list/${encodeURIComponent(title[7])}`);
                 }}
               />
             </li>

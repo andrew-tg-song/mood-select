@@ -4,6 +4,7 @@ import { DarkModeContext } from '../context/DarkModeContext';
 import { useQuery } from '@tanstack/react-query';
 import { search } from '../ShoppingMallProducts';
 import { ProductType } from '../components/product/Product';
+import DetailCardSlider from '../components/slider/DetailCardSlider';
 
 export default function Detail() {
   const { darkMode } = useContext(DarkModeContext);
@@ -17,13 +18,24 @@ export default function Detail() {
 
   return (
     <div className={`${darkMode === 'light' ? 'bg-white text-black' : 'bg-[#0f0f0f] text-white'} pb-[140px]`}>
-      <div className="w-[81.25rem] py-[140px] mx-auto">
+      <div className="w-[87.5rem] py-[50px] mx-auto">
         {products?.map((product: ProductType) => {
           if (product.id === detailId) {
             return (
-              <>
-                <h1>{product.title}</h1>
-              </>
+              <div key={product.id} className="w-[100%]">
+                <div className="w-[100%] flex ">
+                  <DetailCardSlider
+                    img1={product.image}
+                    img2={product.image2}
+                    img3={product.image3}
+                    img4={product.image4}
+                    img5={product.image5}
+                  />
+                  <div>
+                    <h1>{product.title}</h1>
+                  </div>
+                </div>
+              </div>
             );
           }
         })}
