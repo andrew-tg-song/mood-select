@@ -2,7 +2,7 @@ export interface ProductType {
   id: string;
   typeA?: string;
   typeB?: string;
-  color?: ObjectColor[];
+  color?: ProductObjectColor[];
   image?: string;
   image2?: string;
   image3?: string;
@@ -15,16 +15,16 @@ export interface ProductType {
   banner?: string[];
   best?: boolean;
   new?: boolean;
-  option?: Object;
+  option?: ProductObject;
 }
 
-interface ObjectColor {
+interface ProductObjectColor {
   name: string;
-  image: string;
+  image?: string;
 }
 
-interface Object {
-  size: {};
+interface ProductObject {
+  size: string[];
 }
 
 export interface ProductProps {

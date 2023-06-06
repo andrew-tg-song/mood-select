@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, MouseEvent } from 'react';
 import { useParams } from 'react-router-dom';
 import { DarkModeContext } from '../context/DarkModeContext';
 import { useQuery } from '@tanstack/react-query';
@@ -19,22 +19,21 @@ export default function Detail() {
   const { data: products } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
   console.log(products);
 
-  const addComma = (number) => {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  const addComma = (number: number | undefined) => {
+    return number?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') ?? '0';
   };
 
   const [colorOption, setColorOption] = useState('옵션을 선택해주세요.');
   const [sizeOption, setSizeOption] = useState('색상을 먼저 선택해주세요.');
-  const [option, setOption] = useState([]);
 
-  const handleClickColorOption = (e, name) => {
+  const handleClickColorOption = (e: MouseEvent, name: string) => {
     e.preventDefault();
 
     console.log(name);
     setColorOption(name);
   };
 
-  const handleClickSizeOption = (e, name) => {
+  const handleClickSizeOption = (e: MouseEvent, name: string) => {
     e.preventDefault();
 
     // console.log(name);
