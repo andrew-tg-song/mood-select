@@ -8,7 +8,7 @@ interface OptionProps {
   price: number | undefined;
   total: number;
   handleCountChange: (change: number) => void;
-  addComma: (number: any) => any;
+  addComma: (number: number) => void;
 }
 
 export default function OptionSelect({ detail, total, handleCountChange, price, addComma }: OptionProps) {

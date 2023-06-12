@@ -3,7 +3,7 @@ import { BsCaretDown, BsCaretUp } from 'react-icons/bs';
 
 interface ButtonProps {
   value: string;
-  onClick: (e: any) => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export default function Button({ value, onClick }: ButtonProps): JSX.Element {

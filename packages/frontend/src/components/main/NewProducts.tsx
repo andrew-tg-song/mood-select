@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { search } from '../../ShoppingMallProducts';
 import Button from '../Button';
 import Product, { ProductType } from '../product/Product';
@@ -15,7 +15,7 @@ export default function NewProducts() {
   } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
   console.log(products);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div className="mb-[140px]">
@@ -37,7 +37,7 @@ export default function NewProducts() {
             })}
           </div>
 
-          <Button value="MORE VIEW" />
+          <Button onClick={() => {}} value="MORE VIEW" />
         </>
       )}
     </div>
