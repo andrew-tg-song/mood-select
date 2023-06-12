@@ -10,7 +10,7 @@ import { BsHeart } from 'react-icons/bs';
 import { CiShare2 } from 'react-icons/ci';
 import OptionSelect from '../components/detail/OptionSelect';
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { optionListState, optionSelectsCountState } from '../components/Recoil/Atoms';
+import { optionListState } from '../components/Recoil/Atoms';
 import DetailView from '../components/detail/DetailView';
 import MatchUp from '../components/detail/MatchUp';
 import Review from '../components/detail/Review';
@@ -35,12 +35,12 @@ export default function Detail() {
   const [colorOption, setColorOption] = useState('옵션을 선택해주세요.');
   const [sizeOption, setSizeOption] = useState('색상을 먼저 선택해주세요.');
   const [option] = useRecoilState(optionListState);
-  const setOption = useSetRecoilState(optionListState);
+  const setOption = useSetRecoilState<{ color: string; size: string }[]>(optionListState);
   const [total, setTotal] = useState(0);
   const [selectedTab, setSelectedTab] = useState('상품정보');
 
-  const [countsMap] = useRecoilState(optionSelectsCountState);
-  const setCountsMap = useSetRecoilState(optionSelectsCountState);
+  // const [countsMap] = useRecoilState(optionSelectsCountState);
+  // const setCountsMap = useSetRecoilState(optionSelectsCountState);
 
   const handleClickColorOption = (e: MouseEvent, name: string) => {
     e.preventDefault();
@@ -55,8 +55,8 @@ export default function Detail() {
     // console.log(name);
     setSizeOption(name);
 
-    const isOptionExist = (color, size) => {
-      return option.some((o) => o.color === color && o.size === size);
+    const isOptionExist = (color: string, size: string) => {
+      return option.some((o: { color: string; size: string }) => o.color === color && o.size === size);
     };
 
     if (isOptionExist(colorOption, name)) {

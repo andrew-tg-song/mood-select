@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BsPlusSquareDotted, BsDashSquareDotted, BsFillXSquareFill } from 'react-icons/bs';
-import { useRecoilState, useSetRecoilState } from 'recoil';
-import { optionListState, optionSelectsCountState } from '../Recoil/Atoms';
+import { useRecoilState } from 'recoil';
+import { optionListState } from '../Recoil/Atoms';
 
 interface OptionProps {
   detail: { color: string; size: string };

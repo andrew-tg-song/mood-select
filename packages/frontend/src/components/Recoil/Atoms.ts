@@ -1,8 +1,15 @@
 import { atom } from 'recoil';
 
-export const optionListState = atom({
+interface Option {
+  color: string;
+  size: string;
+}
+
+const initialOptions: Option[] = []; // 초기값 설정
+
+export const optionListState = atom<Option[]>({
   key: 'optionListState',
-  default: [],
+  default: initialOptions,
 });
 
 export const countListState = atom({
