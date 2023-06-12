@@ -30,7 +30,10 @@ const router = createBrowserRouter([
       { path: '/new', element: <NewProductsList /> },
       { path: '/best', element: <BestProductsList /> },
       { path: '/today-delivery', element: <TodayDeliveryProductsList /> },
-      { path: '/detail/:detailId', element: <Detail /> },
+      {
+        path: '/detail/:detailId',
+        element: <Detail />,
+      },
       { path: '/cart', element: <Cart /> },
       { path: '/mypage', element: <MyPage /> },
       { path: '/order', element: <Order /> },

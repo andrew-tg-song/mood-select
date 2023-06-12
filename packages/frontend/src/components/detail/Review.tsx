@@ -1,3 +1,7 @@
 export default function Review() {
-  return <div>Review</div>;
+  return (
+    <div>
+      <p>제품 Review</p>
+    </div>
+  );
 }

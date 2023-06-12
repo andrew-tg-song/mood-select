@@ -16,6 +16,7 @@ export interface ProductType {
   best?: boolean;
   new?: boolean;
   option?: ProductObject;
+  detail?: DetailObject;
 }
 
 interface ProductObjectColor {
@@ -27,9 +28,20 @@ interface ProductObject {
   size: string[];
 }
 
+interface DetailObject {
+  detailEventBanner: string[];
+  detailImage: string[];
+  similar: ProductType;
+}
+
 export interface ProductProps {
   product: ProductType;
   onClick(): void;
+}
+
+export interface ObjectCategory {
+  type: string;
+  kind: string[];
 }
 
 const truncate = (str: string, n: number) => {

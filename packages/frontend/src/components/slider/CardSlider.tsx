@@ -33,6 +33,8 @@ interface sliderProps {
   items?: ObjectProps[];
 
   products?: ProductType[];
+
+  item: ProductType;
 }
 
 function CardSlider({
@@ -43,6 +45,7 @@ function CardSlider({
   slidesToShow,
   slidesToScroll,
   products,
+  item,
 }: sliderProps) {
   const { darkMode } = useContext(DarkModeContext);
 
@@ -76,6 +79,8 @@ function CardSlider({
     dotsClass: darkMode === 'light' ? 'dots_custom' : 'dots_custom_dark',
   };
 
+  console.log(item?.detail?.similar);
+
   return (
     <div
       className={`${
@@ -88,7 +93,7 @@ function CardSlider({
           : 'slider_wrapper_today_delivery_products'
       }`}
     >
-      {items ? (
+      {items && (
         <>
           <Slider {...settings}>
             {items?.map((item) => {
@@ -137,15 +142,15 @@ function CardSlider({
             })}
           </Slider>
         </>
-      ) : (
-        <>
-          <Slider {...settings}>
-            {products?.map((product, idx) => {
-              return <Product product={product} key={idx} onClick={() => void 0} />;
-            })}
-          </Slider>
-        </>
       )}
+
+      <>
+        <Slider {...settings}>
+          {products?.map((product, idx) => {
+            return <Product product={product} key={idx} onClick={() => void 0} />;
+          })}
+        </Slider>
+      </>
     </div>
   );
 }
