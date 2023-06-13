@@ -8,6 +8,7 @@ import { GiShoppingCart } from 'react-icons/gi';
 import TopEventBanner from './header/TopEventBanner';
 import { DarkModeContext } from '../context/DarkModeContext';
 import { useNavigate } from 'react-router-dom';
+import { CategoryToggleContext } from '../context/CategoryToggleContext';
 
 export default function NavBar() {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ export default function NavBar() {
   const [wishCount] = useState(0);
 
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const { toggleCategory } = useContext(CategoryToggleContext);
 
   const title = ['아우터', '원피스', '니트', '티셔츠', '블라우스&셔츠', '스커트', '팬츠', '언더웨어', '악세잡화'];
 
@@ -30,7 +32,13 @@ export default function NavBar() {
       >
         <div className="w-[93.75rem] xl:w-[68.752rem] h-[100%] mx-auto flex flex-row items-center justify-between relative">
           <div className="w-[216px] h-[100%] flex items-center absolute left-[50%] ml-[-108px]">
-            <img src={`${darkMode === 'light' ? darkLogo : lightLogo}`} className="w-[100%] object-cover" />
+            <img
+              onClick={() => {
+                navigate('/');
+              }}
+              src={`${darkMode === 'light' ? darkLogo : lightLogo}`}
+              className="w-[100%] object-cover cursor-pointer"
+            />
           </div>
 
           <ul className="text-[#999999] text-[0.75rem] flex absolute right-0 cursor-pointer">
@@ -54,7 +62,7 @@ export default function NavBar() {
               darkMode === 'light' ? 'text-black' : 'text-white'
             } w-[68.75rem] h-[100%] flex justify-between items-center text-[0.875rem] cursor-pointer`}
           >
-            <li>
+            <li onClick={toggleCategory} className="cursor-pointer">
               <CiMenuBurger className={`${darkMode === 'light' ? 'text-black' : 'text-white'}`} />
             </li>
             <li

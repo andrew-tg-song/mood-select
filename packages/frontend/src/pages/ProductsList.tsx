@@ -43,7 +43,7 @@ export default function ProductsList() {
         ) : (
           <>
             {products?.map((product: ProductType) => {
-              if (product.typeB === kind) {
+              if (product.typeB?.includes(kind)) {
                 return (
                   <Product
                     key={product.id}

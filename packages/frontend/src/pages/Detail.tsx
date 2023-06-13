@@ -8,6 +8,15 @@ import DetailCardSlider from '../components/slider/DetailCardSlider';
 
 import { BsHeart } from 'react-icons/bs';
 import { CiShare2 } from 'react-icons/ci';
+import OptionSelect from '../components/detail/OptionSelect';
+import { useRecoilState, useSetRecoilState } from 'recoil';
+import { optionListState } from '../components/Recoil/Atoms';
+import DetailView from '../components/detail/DetailView';
+import MatchUp from '../components/detail/MatchUp';
+import Review from '../components/detail/Review';
+import Refund from '../components/detail/Refund';
+import QaA from '../components/detail/QaA';
+import Similar from '../components/detail/Similar';
 
 export default function Detail() {
   const { darkMode } = useContext(DarkModeContext);
@@ -25,6 +34,13 @@ export default function Detail() {
 
   const [colorOption, setColorOption] = useState('옵션을 선택해주세요.');
   const [sizeOption, setSizeOption] = useState('색상을 먼저 선택해주세요.');
+  const [option] = useRecoilState(optionListState);
+  const setOption = useSetRecoilState<{ color: string; size: string }[]>(optionListState);
+  const [total, setTotal] = useState(0);
+  const [selectedTab, setSelectedTab] = useState('상품정보');
+
+  // const [countsMap] = useRecoilState(optionSelectsCountState);
+  // const setCountsMap = useSetRecoilState(optionSelectsCountState);
 
   const handleClickColorOption = (e: MouseEvent, name: string) => {
     e.preventDefault();
@@ -38,6 +54,28 @@ export default function Detail() {
 
     // console.log(name);
     setSizeOption(name);
+
+    const isOptionExist = (color: string, size: string) => {
+      return option.some((o: { color: string; size: string }) => o.color === color && o.size === size);
+    };
+
+    if (isOptionExist(colorOption, name)) {
+      setTotal(total + 1);
+      return;
+    }
+
+    setSizeOption(name);
+    setTotal(total + 1);
+    setOption((prev) => [...prev, { color: colorOption, size: name }]);
+  };
+  console.log(option);
+
+  const handleCountChange = (change: number) => {
+    setTotal(total + change);
+  };
+
+  const handleTabClick = (tab: string) => {
+    setSelectedTab(tab);
   };
 
   return (
@@ -142,7 +180,7 @@ export default function Detail() {
                       </div>
                     </div>
 
-                    <div className="w-[100%] pb-[35px] flex border-solid border-b-[1px] border-[#d1d1d1]">
+                    <div className="w-[100%] pb-[35px] flex ">
                       <p className="w-[10%] text-[0.875rem] text-[#999999]">사이즈</p>
 
                       <div className="w-[90%]">
@@ -168,6 +206,93 @@ export default function Detail() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="pb-[6px] border-solid border-b-[1px] border-[#d1d1d1]">
+                      {option.length >= 1 ? (
+                        <>
+                          {option.map((o, idx) => {
+                            return (
+                              <OptionSelect
+                                key={idx}
+                                detail={o}
+                                total={total}
+                                handleCountChange={handleCountChange}
+                                price={product.salePrice}
+                                addComma={addComma}
+                              />
+                            );
+                          })}
+                        </>
+                      ) : (
+                        <></>
+                      )}
+                    </div>
+                    <div className="flex justify-between items-center my-[36px] pb-[36px] border-solid border-b-[1px] border-[#d1d1d1]">
+                      <p className="text-[#373534] text-[0.875rem]">총금액</p>
+                      <p className="text-[#FF6F6F] text-[1.5rem]">
+                        {product.salePrice && `${addComma(total * product?.salePrice)}원`}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-[100%] mt-[182px]">
+                  <ul className="w-[100%] flex text-center border-solid border-[#D2D2D2] text-[0.875rem] text-[#282828]">
+                    <li
+                      onClick={() => handleTabClick('상품정보')}
+                      className={`${
+                        selectedTab === '상품정보' ? 'bg-[#333333] text-[#ffffff]' : ''
+                      } w-[20%] border-t-[1px] border-x-[1px] py-[15px] rounded-t-lg`}
+                    >
+                      상품정보
+                    </li>
+                    <li
+                      onClick={() => handleTabClick('관련상품')}
+                      className={`${
+                        selectedTab === '관련상품' ? 'bg-[#333333] text-[#ffffff]' : ''
+                      } w-[20%] border-t-[1px] border-x-[1px] py-[15px] rounded-t-lg`}
+                    >
+                      관련상품
+                    </li>
+                    <li
+                      onClick={() => handleTabClick('구매후기')}
+                      className={`${
+                        selectedTab === '구매후기' ? 'bg-[#333333] text-[#ffffff]' : ''
+                      } w-[20%] border-t-[1px] border-x-[1px] py-[15px] rounded-t-lg`}
+                    >
+                      구매후기
+                    </li>
+                    <li
+                      onClick={() => handleTabClick('교환 및 반품')}
+                      className={`${
+                        selectedTab === '교환 및 반품' ? 'bg-[#333333] text-[#ffffff]' : ''
+                      } w-[20%] border-t-[1px] border-x-[1px] py-[15px] rounded-t-lg`}
+                    >
+                      교환 및 반품
+                    </li>
+                    <li
+                      onClick={() => handleTabClick('상품문의')}
+                      className={`${
+                        selectedTab === '상품문의' ? 'bg-[#333333] text-[#ffffff]' : ''
+                      } w-[20%] border-t-[1px] border-x-[1px] py-[15px] rounded-t-lg`}
+                    >
+                      상품문의
+                    </li>
+                  </ul>
+                  <div className="w-[100%] pt-[40px] text-center">
+                    {selectedTab === '상품정보' && (
+                      <div>
+                        <DetailView
+                          detailImg={product?.detail?.detailImage}
+                          detailBannerImg={product?.detail?.detailEventBanner}
+                        />
+                        <div className="w-[100%] h-[10px] bg-[#f6f6f6]" />
+                        <Similar product={product} />
+                      </div>
+                    )}
+                    {selectedTab === '관련상품' && <MatchUp />}
+                    {selectedTab === '구매후기' && <Review />}
+                    {selectedTab === '교환 및 반품' && <Refund />}
+                    {selectedTab === '상품문의' && <QaA />}
                   </div>
                 </div>
               </div>
