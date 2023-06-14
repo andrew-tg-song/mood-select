@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import { DarkModeContext } from '../context/DarkModeContext';
+import { useRecoilState } from 'recoil';
+import { darkModeState } from '../atoms/app-atoms';
 import CategoryBanner from '../components/main/CategoryBanner';
 import MainSlider from '../components/main/MainSlider';
 import EventBanner from '../components/main/EventBanner';
@@ -94,7 +94,7 @@ const products: ProductType[] = [
 ];
 
 export default function Main() {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
 
   return (
     <div className={`${darkMode === 'light' ? 'bg-white text-black' : 'bg-[#0f0f0f] text-white'} pb-[140px]`}>

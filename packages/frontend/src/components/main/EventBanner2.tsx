@@ -1,4 +1,4 @@
-import { search } from '../../ShoppingMallProducts';
+import { search } from '../../apis/ShoppingMallProducts';
 import { useQuery } from '@tanstack/react-query';
 
 export default function EventBanner2() {

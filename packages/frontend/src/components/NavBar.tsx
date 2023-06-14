@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 
 import darkLogo from '../assets/logo.png';
 import lightLogo from '../assets/logo2.png';
@@ -6,9 +6,9 @@ import lightLogo from '../assets/logo2.png';
 import { CiMenuBurger, CiSearch, CiUser, CiHeart, CiDark, CiLight } from 'react-icons/ci';
 import { GiShoppingCart } from 'react-icons/gi';
 import TopEventBanner from './header/TopEventBanner';
-import { DarkModeContext } from '../context/DarkModeContext';
+import { categoryAppearState, darkModeState } from '../atoms/app-atoms';
 import { useNavigate } from 'react-router-dom';
-import { CategoryToggleContext } from '../context/CategoryToggleContext';
+import { useRecoilState } from 'recoil';
 
 export default function NavBar() {
   const navigate = useNavigate();
@@ -16,8 +16,16 @@ export default function NavBar() {
   const [cartCount] = useState(0);
   const [wishCount] = useState(0);
 
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
-  const { toggleCategory } = useContext(CategoryToggleContext);
+  const [darkMode, setDarkMode] = useRecoilState(darkModeState);
+  const toggleDarkMode = () => {
+    if (darkMode === 'dark') {
+      setDarkMode('light');
+    } else {
+      setDarkMode('dark');
+    }
+  };
+
+  const [, setCategoryAppear] = useRecoilState(categoryAppearState);
 
   const title = ['아우터', '원피스', '니트', '티셔츠', '블라우스&셔츠', '스커트', '팬츠', '언더웨어', '악세잡화'];
 
@@ -62,7 +70,7 @@ export default function NavBar() {
               darkMode === 'light' ? 'text-black' : 'text-white'
             } w-[68.75rem] h-[100%] flex justify-between items-center text-[0.875rem] cursor-pointer`}
           >
-            <li onClick={toggleCategory} className="cursor-pointer">
+            <li onClick={() => setCategoryAppear(true)} className="cursor-pointer">
               <CiMenuBurger className={`${darkMode === 'light' ? 'text-black' : 'text-white'}`} />
             </li>
             <li

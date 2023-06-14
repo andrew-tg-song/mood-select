@@ -5,11 +5,9 @@ interface Option {
   size: string;
 }
 
-const initialOptions: Option[] = []; // 초기값 설정
-
 export const optionListState = atom<Option[]>({
   key: 'optionListState',
-  default: initialOptions,
+  default: [],
 });
 
 export const countListState = atom({

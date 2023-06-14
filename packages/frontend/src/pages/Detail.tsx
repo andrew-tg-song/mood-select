@@ -1,8 +1,8 @@
 import { useState, useContext, MouseEvent } from 'react';
 import { useParams } from 'react-router-dom';
-import { DarkModeContext } from '../context/DarkModeContext';
+import { darkModeState } from '../atoms/app-atoms';
 import { useQuery } from '@tanstack/react-query';
-import { search } from '../ShoppingMallProducts';
+import { search } from '../apis/ShoppingMallProducts';
 import { ProductType } from '../components/product/Product';
 import DetailCardSlider from '../components/slider/DetailCardSlider';
 
@@ -10,7 +10,7 @@ import { BsHeart } from 'react-icons/bs';
 import { CiShare2 } from 'react-icons/ci';
 import OptionSelect from '../components/detail/OptionSelect';
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { optionListState } from '../components/Recoil/Atoms';
+import { optionListState } from '../atoms/product-atoms';
 import DetailView from '../components/detail/DetailView';
 import MatchUp from '../components/detail/MatchUp';
 import Review from '../components/detail/Review';
@@ -19,7 +19,7 @@ import QaA from '../components/detail/QaA';
 import Similar from '../components/detail/Similar';
 
 export default function Detail() {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
 
   const { detailId } = useParams();
 

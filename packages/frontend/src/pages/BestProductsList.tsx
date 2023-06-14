@@ -1,11 +1,11 @@
-import { useContext } from 'react';
+import { useRecoilState } from 'recoil';
 import { useQuery } from '@tanstack/react-query';
-import { search } from '../ShoppingMallProducts';
-import { DarkModeContext } from '../context/DarkModeContext';
+import { search } from '../apis/ShoppingMallProducts';
+import { darkModeState } from '../atoms/app-atoms';
 import Product, { ProductType } from '../components/product/Product';
 
 export default function BestProductsList() {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
 
   const name = 'PRODUCTS';
 

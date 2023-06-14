@@ -1,13 +1,14 @@
 // export default CardSlider;
 import Slider from 'react-slick';
-import { ReactNode, useContext } from 'react';
+import { ReactNode } from 'react';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import NextArrow from './NextArrow';
 import PrevArrow from './PrevArrow';
-import { DarkModeContext } from '../../context/DarkModeContext';
 import Product, { ProductType } from '../product/Product';
+import { useRecoilState } from 'recoil';
+import { darkModeState } from '../../atoms/app-atoms';
 
 interface ObjectProps {
   id: number;
@@ -47,7 +48,7 @@ function CardSlider({
   products,
   item,
 }: sliderProps) {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
 
   const settings = {
     className: slidesToShow === 3 ? 'center' : '',

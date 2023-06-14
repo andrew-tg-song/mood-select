@@ -1,13 +1,13 @@
-import { useContext } from 'react';
+import { useRecoilState } from 'recoil';
 import { useQuery } from '@tanstack/react-query';
-import { DarkModeContext } from '../context/DarkModeContext';
+import { darkModeState } from '../atoms/app-atoms';
 import { useNavigate, useParams } from 'react-router-dom';
-import { search } from '../ShoppingMallProducts';
+import { search } from '../apis/ShoppingMallProducts';
 import Product, { ProductType } from '../components/product/Product';
 import ProductNav from '../components/product/ProductNav';
 
 export default function ProductsList() {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
 
   const { listName, kind } = useParams();
   console.log(listName, kind);

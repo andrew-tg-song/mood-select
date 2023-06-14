@@ -1,10 +1,10 @@
-import { useContext } from 'react';
-import { DarkModeContext } from '../context/DarkModeContext';
+import { useRecoilState } from 'recoil';
+import { darkModeState } from '../atoms/app-atoms';
 import darkLogo from '../assets/logo.png';
 import lightLogo from '../assets/logo2.png';
 
 export default function Footer() {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
 
   return (
     <div

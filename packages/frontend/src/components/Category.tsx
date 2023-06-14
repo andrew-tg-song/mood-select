@@ -1,13 +1,12 @@
-import { useContext } from 'react';
-import { DarkModeContext } from '../context/DarkModeContext';
+import { useRecoilState } from 'recoil';
+import { categoryAppearState, darkModeState } from '../atoms/app-atoms';
 import { useQuery } from '@tanstack/react-query';
-import { search } from '../ShoppingMallProducts';
+import { search } from '../apis/ShoppingMallProducts';
 import { BsXLg } from 'react-icons/bs';
-import { CategoryToggleContext } from '../context/CategoryToggleContext';
 import { ObjectCategory } from './product/Product';
 
 export default function Category() {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
   console.log(darkMode);
 
   const name = 'NAV';
@@ -15,7 +14,7 @@ export default function Category() {
   const { data: products } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
   console.log(products);
 
-  const { categoryAppear, toggleCategory } = useContext(CategoryToggleContext);
+  const [categoryAppear, setCategoryAppear] = useRecoilState(categoryAppearState);
 
   return (
     <div
@@ -27,7 +26,7 @@ export default function Category() {
       <div className="w-[81.25rem] h-[100vh] py-[60px] box-border mx-auto">
         <div className="w-[100%] flex justify-end items-center">
           <button
-            onClick={toggleCategory}
+            onClick={() => setCategoryAppear(false)}
             className="hover:animate-fade-out-down w-[2.5rem] h-[40px] flex justify-center items-center text-[1.4rem] text-[#282828]"
           >
             <BsXLg />

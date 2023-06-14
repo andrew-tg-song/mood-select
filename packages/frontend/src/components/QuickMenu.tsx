@@ -1,14 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { DarkModeContext } from '../context/DarkModeContext';
+import { darkModeState } from '../atoms/app-atoms';
 import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
 import { AiOutlineWechat } from 'react-icons/ai';
+import { useRecoilState } from 'recoil';
 
 interface QuickMenuPropsType {
   contentRef: React.RefObject<HTMLDivElement>;
 }
 
 export default function QuickMenu({ contentRef }: QuickMenuPropsType) {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
 
   const [scrollY, setScrollY] = useState(0);
   const [showButton, setShowButton] = useState(false);

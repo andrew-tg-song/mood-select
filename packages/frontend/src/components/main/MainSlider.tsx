@@ -1,4 +1,4 @@
-import { search } from '../../ShoppingMallProducts';
+import { search } from '../../apis/ShoppingMallProducts';
 import CardSlider from '../slider/CardSlider';
 import { useQuery } from '@tanstack/react-query';
 

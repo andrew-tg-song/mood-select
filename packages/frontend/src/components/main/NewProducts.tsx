@@ -1,5 +1,5 @@
 // import { useNavigate } from 'react-router-dom';
-import { search } from '../../ShoppingMallProducts';
+import { search } from '../../apis/ShoppingMallProducts';
 import Button from '../Button';
 import Product, { ProductType } from '../product/Product';
 import Title from '../slider/Title';
