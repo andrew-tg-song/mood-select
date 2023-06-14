@@ -37,7 +37,7 @@ export default function NewProducts() {
             })}
           </div>
 
-          <Button onClick={() => {}} value="MORE VIEW" />
+          <Button onClick={() => void 0} value="MORE VIEW" />
         </>
       )}
     </div>

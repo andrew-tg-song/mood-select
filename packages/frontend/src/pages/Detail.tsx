@@ -1,4 +1,4 @@
-import { useState, useContext, MouseEvent } from 'react';
+import { useState, MouseEvent } from 'react';
 import { useParams } from 'react-router-dom';
 import { darkModeState } from '../atoms/app-atoms';
 import { useQuery } from '@tanstack/react-query';

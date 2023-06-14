@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { darkModeState } from '../atoms/app-atoms';
 import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
 import { AiOutlineWechat } from 'react-icons/ai';
