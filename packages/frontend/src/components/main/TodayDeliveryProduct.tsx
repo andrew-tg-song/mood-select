@@ -14,7 +14,7 @@ export default function TodayDeliveryProduct({ products }: ProductsProps) {
 
       <CardSlider products={products} slidesToShow={4} slidesToScroll={4} />
 
-      <Button value="MORE VIEW" />
+      <Button onClick={() => void 0} value="MORE VIEW" />
     </div>
   );
 }

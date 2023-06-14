@@ -35,7 +35,7 @@ interface sliderProps {
 
   products?: ProductType[];
 
-  item: ProductType;
+  item?: ProductType;
 }
 
 function CardSlider({

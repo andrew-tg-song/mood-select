@@ -9,7 +9,7 @@ interface detailProps {
 export default function DetailView({ detailImg, detailBannerImg }: detailProps) {
   const [fold, setFold] = useState<boolean>(false);
 
-  const handleClickFold = (e) => {
+  const handleClickFold = (e: React.MouseEvent) => {
     e.preventDefault();
 
     setFold((prev) => !prev);

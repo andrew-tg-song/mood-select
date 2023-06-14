@@ -1,6 +1,11 @@
+import { ProductType } from '../product/Product';
 import CardSlider from '../slider/CardSlider';
 
-export default function Similar({ product }) {
+interface SimilarProps {
+  product: ProductType;
+}
+
+export default function Similar({ product }: SimilarProps) {
   console.log(product);
   return (
     <div>
