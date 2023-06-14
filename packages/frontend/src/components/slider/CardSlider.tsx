@@ -9,13 +9,7 @@ import PrevArrow from './PrevArrow';
 import Product, { ProductType } from '../product/Product';
 import { useRecoilState } from 'recoil';
 import { darkModeState } from '../../atoms/app-atoms';
-
-interface ObjectProps {
-  id: number;
-  image: string;
-  title: string;
-  desc: string;
-}
+import { PromotionItem } from 'entity';
 
 interface sliderProps {
   /** 커스텀 클래스 */
@@ -31,7 +25,7 @@ interface sliderProps {
 
   slidesToScroll?: number;
 
-  items?: ObjectProps[];
+  items?: PromotionItem[];
 
   products?: ProductType[];
 
@@ -118,11 +112,11 @@ function CardSlider({
                   )}
 
                   {slidesToShow === 1 ? (
-                    <img className="main_slider_img" src={item.image} />
+                    <img className="main_slider_img" src={item.imageUrl} />
                   ) : slidesToShow === 2 ? (
-                    <img className={`${item.id % 2 === 0 ? 'slider_img' : 'slider_img2'}`} src={item.image} />
+                    <img className={`${item.id % 2 === 0 ? 'slider_img' : 'slider_img2'}`} src={item.imageUrl} />
                   ) : (
-                    <img className="best_products_slider_img" src={item.image} />
+                    <img className="best_products_slider_img" src={item.imageUrl} />
                   )}
 
                   {slidesToShow === 1 ? (
@@ -130,12 +124,12 @@ function CardSlider({
                   ) : slidesToShow === 2 ? (
                     <div className="desc_wrap">
                       <h1 className="desc_h1">{item.title}</h1>
-                      <p className="desc_p">{item.desc}</p>
+                      <p className="desc_p">{item.description}</p>
                     </div>
                   ) : (
                     <div className="desc_wrap_best_products">
                       <h1 className="desc_h1_best_products">{item.title}</h1>
-                      <p className="desc_p_best_products">{item.desc}</p>
+                      <p className="desc_p_best_products">{item.description}</p>
                     </div>
                   )}
                 </div>

@@ -1,16 +1,15 @@
-import { search } from '../../apis/ShoppingMallProducts';
+import { PromotionType } from 'entity';
+import { fetchPromotionByTitle } from '../../apis/promotion';
 import CardSlider from '../slider/CardSlider';
 import { useQuery } from '@tanstack/react-query';
 
 export default function MainSlider() {
-  const name = 'MAINSLIDER';
-
-  const {
-    isLoading,
-    error,
-    data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
-  console.log(products);
+  const { isLoading, error, data } = useQuery(
+    ['mainBanners'],
+    () => fetchPromotionByTitle(PromotionType.BANNER, 'mainBanners'),
+    { staleTime: 1000 * 60 * 5 }
+  );
+  const items = data?.items;
 
   return (
     <div>
@@ -19,7 +18,7 @@ export default function MainSlider() {
       ) : error ? (
         <p>Something is wrong...😔</p>
       ) : (
-        <CardSlider items={products} slidesToShow={1} slidesToScroll={1} />
+        <CardSlider items={items} slidesToShow={1} slidesToScroll={1} />
       )}
     </div>
   );
