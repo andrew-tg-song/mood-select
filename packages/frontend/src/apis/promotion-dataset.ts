@@ -1,4 +1,4 @@
-import { Promotion, PromotionType } from 'entity';
+import { Promotion, PromotionType } from './../../../entity/src/promotion/promotion.entity';
 
 export const bannersDataset: Record<string, Promotion> = {
   mainBanners: {

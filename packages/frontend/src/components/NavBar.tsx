@@ -30,15 +30,15 @@ export default function NavBar() {
   const title = ['아우터', '원피스', '니트', '티셔츠', '블라우스&셔츠', '스커트', '팬츠', '언더웨어', '악세잡화'];
 
   return (
-    <div className="w-[100%] h-[220px] font-sans">
+    <div className="w-[100%] lg:h-[220px] font-sans">
       <TopEventBanner />
 
       <div
         className={`${
           darkMode === 'light' ? 'bg-white border-[#dedede]' : 'bg-[#0f0f0f] border-[#3b3b3b]'
-        } w-[100%] h-[120px] border-solid border-b-[0.6px]`}
+        } w-full h-[120px] border-solid border-b-[0.6px]`}
       >
-        <div className="w-[93.75rem] xl:w-[68.752rem] h-[100%] mx-auto flex flex-row items-center justify-between relative">
+        <div className="w-11/12 h-[100%] mx-auto flex flex-row items-center justify-between relative">
           <div className="w-[216px] h-[100%] flex items-center absolute left-[50%] ml-[-108px]">
             <img
               onClick={() => {
@@ -62,13 +62,13 @@ export default function NavBar() {
       <div
         className={`${
           darkMode === 'light' ? 'bg-white border-[#dedede]' : 'bg-[#0f0f0f] border-[#3b3b3b]'
-        } w-[100%] h-[60px]  border-solid border-b-[0.6px]`}
+        } w-full lg:h-[60px] border-solid border-b-[0.6px]`}
       >
-        <div className="w-[93.75rem] h-[100%] mx-auto flex flex-row items-center justify-between relative">
+        <div className="xl:w-11/12 lg:w-[96%] h-[100%] mx-auto flex lg:flex-row lg:items-center lg:justify-between relative">
           <ul
             className={`${
               darkMode === 'light' ? 'text-black' : 'text-white'
-            } w-[68.75rem] h-[100%] flex justify-between items-center text-[0.875rem] cursor-pointer`}
+            } xl:w-9/12 lg:w-[86%] h-[100%] flex justify-between items-center xl:text-[0.875rem] lg:text-[0.75rem] cursor-pointer`}
           >
             <li onClick={() => setCategoryAppear(true)} className="cursor-pointer">
               <CiMenuBurger className={`${darkMode === 'light' ? 'text-black' : 'text-white'}`} />
@@ -179,7 +179,7 @@ export default function NavBar() {
           <ul
             className={`${
               darkMode === 'light' ? 'text-black' : 'text-white'
-            } w-[11.625rem] h-[100%] flex justify-between items-center text-[1.2rem] cursor-pointer`}
+            } xl:w-[12%] lg:w-[11%] h-[100%] flex justify-between items-center xl:text-[1.2rem] lg:text-[1.1rem] cursor-pointer`}
           >
             <li>
               <CiSearch />

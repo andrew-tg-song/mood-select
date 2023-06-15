@@ -3,33 +3,33 @@
     "best_products": [
       {
         "id": "a1d8a756-3ae9-43eb-a775-080709ec0ec5",
-        "image": "./img/best_product_1.png",
+        "imageUrl": "./img/best_product_1.png",
         "title": "오엘루 링클 셔링 리본 롱 원피스",
-        "desc": "부드럽고 가벼운 링클 원단으로 착용감이 매우 편안하며 섬세한 셔링 디테일이 여리하고 청초한 분위기를 더해준답니다 :)"
+        "description": "부드럽고 가벼운 링클 원단으로 착용감이 매우 편안하며 섬세한 셔링 디테일이 여리하고 청초한 분위기를 더해준답니다 :)"
       },
       {
         "id": "3bbeb569-b89d-462b-a832-68744a1f3d11",
-        "image": "./img/best_product_2.png",
+        "imageUrl": "./img/best_product_2.png",
         "title": "로앤브 세미크롭 투웨이 세일러카라 집업",
-        "desc": "세미크롭에 투웨이 디테일로 다양하게 연출하기 좋으며 소재까지 부드럽답니다 :)"
+        "description": "세미크롭에 투웨이 디테일로 다양하게 연출하기 좋으며 소재까지 부드럽답니다 :)"
       },
       {
         "id": "46e34bbc-9326-484b-b0f2-81b05beae3d6",
-        "image": "./img/best_product_3.png",
+        "imageUrl": "./img/best_product_3.png",
         "title": "피에로 밴딩 와이드 팬츠",
-        "desc": "편하게 자주 입히는 여유있는 와이드 핏의 밴딩 팬츠에요 찰랑거리는 가벼운 소재로 피부에 닿는 감촉도 좋답니다:)"
+        "description": "편하게 자주 입히는 여유있는 와이드 핏의 밴딩 팬츠에요 찰랑거리는 가벼운 소재로 피부에 닿는 감촉도 좋답니다:)"
       },
       {
         "id": "fa0df439-e227-405e-bc4b-09fb0b71a749",
-        "image": "./img/best_product_4.png",
+        "imageUrl": "./img/best_product_4.png",
         "title": "베티론 플리츠 뷔스티에 롱 원피스 (끈조절)",
-        "desc": "플리츠 스커트에 뷔스티에 디테일로 여성스럽게 연출하기 좋은 원피스 :)"
+        "description": "플리츠 스커트에 뷔스티에 디테일로 여성스럽게 연출하기 좋은 원피스 :)"
       },
       {
         "id": "edb6eb60-bd05-49ff-bae8-f7e3521b5ed7",
-        "image": "./img/best_product_5.png",
+        "imageUrl": "./img/best_product_5.png",
         "title": "젠다링 자켓 밴딩 와이드 팬츠 투피스 세트",
-        "desc": "원버튼 자켓과 밴딩 와이드 팬츠가 세트인 투피스 아이템이랍니다 따로 또 같이 착용하기 너무 좋아요 실용도 높은 세트로 강추드려요 (:"
+        "description": "원버튼 자켓과 밴딩 와이드 팬츠가 세트인 투피스 아이템이랍니다 따로 또 같이 착용하기 너무 좋아요 실용도 높은 세트로 강추드려요 (:"
       }
     ],
     "new_products": [
@@ -54,10 +54,7 @@
         "image": "./img/new_product_1.png",
         "price": 41000,
         "salePrice": 37620,
-        "banner": [
-          "NEW",
-          "무료 배송"
-        ]
+        "banner": ["NEW", "무료 배송"]
       },
       {
         "id": "da597cb8-85d9-4c4d-811f-5f10f7eb3545",
@@ -76,10 +73,7 @@
         "image": "./img/new_product_2.png",
         "price": 44900,
         "salePrice": 40410,
-        "banner": [
-          "BEST",
-          "NEW"
-        ]
+        "banner": ["BEST", "NEW"]
       },
       {
         "id": "3bbeb569-b89d-462b-a832-68744a1f3d11",
@@ -102,10 +96,7 @@
         ],
         "price": 41000,
         "salePrice": 37620,
-        "banner": [
-          "NEW",
-          "무료 배송"
-        ]
+        "banner": ["NEW", "무료 배송"]
       },
       {
         "id": "a1d8a756-3ae9-43eb-a775-080709ec0ec5",
@@ -124,10 +115,7 @@
         ],
         "price": 63900,
         "salePrice": 57510,
-        "banner": [
-          "BEST",
-          "NEW"
-        ]
+        "banner": ["BEST", "NEW"]
       },
       {
         "id": "3bbeb569-b89d-462b-a832-68744a1f3d11",
@@ -146,11 +134,7 @@
         ],
         "price": 63900,
         "salePrice": 57510,
-        "banner": [
-          "BEST",
-          "NEW",
-          "무료 배송"
-        ]
+        "banner": ["BEST", "NEW", "무료 배송"]
       },
       {
         "id": "fa0df439-e227-405e-bc4b-09fb0b71a749",
@@ -169,10 +153,7 @@
         ],
         "price": 59100,
         "salePrice": 42500,
-        "banner": [
-          "NEW",
-          "무료 배송"
-        ]
+        "banner": ["NEW", "무료 배송"]
       },
       {
         "id": "46e34bbc-9326-484b-b0f2-81b05beae3d6",
@@ -191,11 +172,7 @@
         ],
         "price": 19550,
         "salePrice": 17540,
-        "banner": [
-          "BEST",
-          "NEW",
-          "무료 배송"
-        ]
+        "banner": ["BEST", "NEW", "무료 배송"]
       },
       {
         "id": "fa0df439-e227-405e-bc4b-09fb0b71a749",
@@ -214,11 +191,7 @@
         ],
         "price": 38800,
         "salePrice": 34920,
-        "banner": [
-          "BEST",
-          "NEW",
-          "무료 배송"
-        ]
+        "banner": ["BEST", "NEW", "무료 배송"]
       }
     ],
     "today_delivery_products": [
@@ -239,9 +212,7 @@
         ],
         "price": 63900,
         "salePrice": 57510,
-        "banner": [
-          "BEST"
-        ]
+        "banner": ["BEST"]
       },
       {
         "id": "fa0df439-e227-405e-bc4b-09fb0b71a749",
@@ -260,10 +231,7 @@
         ],
         "price": 38800,
         "salePrice": 34920,
-        "banner": [
-          "BEST",
-          "NEW"
-        ]
+        "banner": ["BEST", "NEW"]
       },
       {
         "id": "edb6eb60-bd05-49ff-bae8-f7e3521b5ed7",
@@ -282,11 +250,7 @@
         ],
         "price": 17900,
         "salePrice": 16100,
-        "banner": [
-          "BEST",
-          "NEW",
-          "무료 배송"
-        ]
+        "banner": ["BEST", "NEW", "무료 배송"]
       },
       {
         "id": "6e5493a3-0968-4a86-976e-79afe6e2e5f6",
@@ -309,9 +273,7 @@
         ],
         "price": 22800,
         "salePrice": 20520,
-        "banner": [
-          "무료 배송"
-        ]
+        "banner": ["무료 배송"]
       },
       {
         "id": "025a470b-579b-48fb-8f92-a206b3c673a1",
@@ -330,10 +292,7 @@
         ],
         "price": 26800,
         "salePrice": 24120,
-        "banner": [
-          "NEW",
-          "무료 배송"
-        ]
+        "banner": ["NEW", "무료 배송"]
       },
       {
         "id": "f573bb65-6646-4aa3-ac73-d7b12e98afbf",
@@ -348,11 +307,7 @@
         ],
         "price": 41500,
         "salePrice": 37350,
-        "banner": [
-          "BEST",
-          "NEW",
-          "무료 배송"
-        ]
+        "banner": ["BEST", "NEW", "무료 배송"]
       },
       {
         "id": "7afe751e-46e0-49b7-99e9-232da4f3ee31",
@@ -371,9 +326,7 @@
         ],
         "price": 45900,
         "salePrice": 41310,
-        "banner": [
-          "무료 배송"
-        ]
+        "banner": ["무료 배송"]
       },
       {
         "id": "0238efc1-c19f-47ac-89a9-b603581f7c30",
@@ -392,19 +345,14 @@
         ],
         "price": 34900,
         "salePrice": 31140,
-        "banner": [
-          "BEST",
-          "NEW"
-        ]
+        "banner": ["BEST", "NEW"]
       }
     ],
     "products": [
       {
         "id": "025a470b-579b-48fb-8f92-a206b3c673a1",
         "typeA": "블라우스&셔츠",
-        "typeB": [
-          "셔츠"
-        ],
+        "typeB": ["셔츠"],
         "mood": "cool",
         "new": false,
         "best": true,
@@ -440,21 +388,12 @@
         ],
         "price": 26800,
         "salePrice": 24120,
-        "banner": [
-          "NEW",
-          "무료 배송"
-        ],
+        "banner": ["NEW", "무료 배송"],
         "option": {
-          "size": [
-            "44~88",
-            "99~120(+1,000won)"
-          ]
+          "size": ["44~88", "99~120(+1,000won)"]
         },
         "detail": {
-          "detailEventBanner": [
-            "/img/detail_event_banner_1.png",
-            "/img/detail_event_banner_2.png"
-          ],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
             "/img/detail_1-1.png",
             "/img/detail_1-2.png",
@@ -476,9 +415,7 @@
       {
         "id": "07a50e87-6bb3-499f-83c6-d9f82744da6d",
         "typeA": "원피스",
-        "typeB": [
-          "롱"
-        ],
+        "typeB": ["롱"],
         "mood": "cute",
         "new": true,
         "best": true,
@@ -514,21 +451,12 @@
         ],
         "price": 52900,
         "salePrice": 47610,
-        "banner": [
-          "NEW",
-          "BEST",
-          "무료 배송"
-        ],
+        "banner": ["NEW", "BEST", "무료 배송"],
         "option": {
-          "size": [
-            "Free"
-          ]
+          "size": ["Free"]
         },
         "detail": {
-          "detailEventBanner": [
-            "/img/detail_event_banner_1.png",
-            "/img/detail_event_banner_2.png"
-          ],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
             "/img/detail_2-1.png",
             "/img/detail_2-2.png",
@@ -595,20 +523,12 @@
         ],
         "price": 70000,
         "salePrice": 49800,
-        "banner": [
-          "BEST",
-          "무료 배송"
-        ],
+        "banner": ["BEST", "무료 배송"],
         "option": {
-          "size": [
-            "M"
-          ]
+          "size": ["M"]
         },
         "detail": {
-          "detailEventBanner": [
-            "/img/detail_event_banner_1.png",
-            "/img/detail_event_banner_2.png"
-          ],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
             "/img/detail_2-1.png",
             "/img/detail_2-2.png",
@@ -643,10 +563,7 @@
       {
         "id": "a8f06afe-143b-484d-85d4-b4bba4f38687",
         "typeA": "원피스",
-        "typeB": [
-          "미니",
-          "롱"
-        ],
+        "typeB": ["미니", "롱"],
         "mood": "lovely",
         "new": true,
         "best": true,
@@ -674,26 +591,12 @@
         ],
         "price": 89000,
         "salePrice": 66750,
-        "banner": [
-          "NEW",
-          "BEST",
-          "무료 배송"
-        ],
+        "banner": ["NEW", "BEST", "무료 배송"],
         "option": {
-          "size": [
-            "S(미니)",
-            "M(미니)",
-            "S(롱) + 4,000",
-            "M(롱) + 4,000",
-            "XS(미니)",
-            "XS(롱)"
-          ]
+          "size": ["S(미니)", "M(미니)", "S(롱) + 4,000", "M(롱) + 4,000", "XS(미니)", "XS(롱)"]
         },
         "detail": {
-          "detailEventBanner": [
-            "/img/detail_event_banner_1.png",
-            "/img/detail_event_banner_2.png"
-          ],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
             "/img/detail_4-1.gif",
             "/img/detail_4-2.png",
@@ -736,9 +639,7 @@
       {
         "id": "9580d598-10d6-43c7-a4f2-4e9c8a344528",
         "typeA": "티셔츠",
-        "typeB": [
-          "긴소매"
-        ],
+        "typeB": ["긴소매"],
         "mood": "lovely",
         "new": true,
         "best": true,
@@ -778,20 +679,12 @@
         ],
         "price": 26000,
         "salePrice": 19800,
-        "banner": [
-          "NEW",
-          "BEST"
-        ],
+        "banner": ["NEW", "BEST"],
         "option": {
-          "size": [
-            "free"
-          ]
+          "size": ["free"]
         },
         "detail": {
-          "detailEventBanner": [
-            "/img/detail_event_banner_1.png",
-            "/img/detail_event_banner_2.png"
-          ],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
             "/img/detail_5-1.gif",
             "/img/detail_5-2.png",
@@ -829,9 +722,7 @@
       {
         "id": "43a2ef68-c4cb-498b-a1a3-fa84caa6ee32",
         "typeA": "티셔츠",
-        "typeB": [
-          "긴소매"
-        ],
+        "typeB": ["긴소매"],
         "mood": "lovely",
         "new": false,
         "best": true,
@@ -863,19 +754,12 @@
         ],
         "price": 40000,
         "salePrice": 29500,
-        "banner": [
-          "BEST"
-        ],
+        "banner": ["BEST"],
         "option": {
-          "size": [
-            "free"
-          ]
+          "size": ["free"]
         },
         "detail": {
-          "detailEventBanner": [
-            "/img/detail_event_banner_1.png",
-            "/img/detail_event_banner_2.png"
-          ],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
             "/img/detail_5-1.gif",
             "/img/detail_5-2.png",
@@ -911,9 +795,7 @@
           "similar": {
             "id": "9580d598-10d6-43c7-a4f2-4e9c8a344528",
             "typeA": "티셔츠",
-            "typeB": [
-              "긴소매"
-            ],
+            "typeB": ["긴소매"],
             "mood": "lovely",
             "new": true,
             "best": true,
@@ -953,20 +835,12 @@
             ],
             "price": 26000,
             "salePrice": 19800,
-            "banner": [
-              "NEW",
-              "BEST"
-            ],
+            "banner": ["NEW", "BEST"],
             "option": {
-              "size": [
-                "free"
-              ]
+              "size": ["free"]
             },
             "detail": {
-              "detailEventBanner": [
-                "/img/detail_event_banner_1.png",
-                "/img/detail_event_banner_2.png"
-              ],
+              "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
               "detailImage": [
                 "/img/detail_5-1.gif",
                 "/img/detail_5-2.png",
@@ -1006,9 +880,7 @@
       {
         "id": "8bd40b84-062c-4dd2-810e-10b6ba4b2044",
         "typeA": "티셔츠",
-        "typeB": [
-          "반소매"
-        ],
+        "typeB": ["반소매"],
         "mood": "lovely",
         "new": true,
         "best": false,
@@ -1056,20 +928,12 @@
         ],
         "price": 24000,
         "salePrice": 16800,
-        "banner": [
-          "NEW",
-          "무료 배송"
-        ],
+        "banner": ["NEW", "무료 배송"],
         "option": {
-          "size": [
-            "free"
-          ]
+          "size": ["free"]
         },
         "detail": {
-          "detailEventBanner": [
-            "/img/detail_event_banner_1.png",
-            "/img/detail_event_banner_2.png"
-          ],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
             "/img/detail_5-1.gif",
             "/img/detail_5-2.png",
@@ -1108,36 +972,19 @@
     "category": [
       {
         "type": "NEW",
-        "kind": [
-          "NEW"
-        ]
+        "kind": ["NEW"]
       },
       {
         "type": "BEST",
-        "kind": [
-          "BEST"
-        ]
+        "kind": ["BEST"]
       },
       {
         "type": "오늘 출발 제품🚛",
-        "kind": [
-          "오늘 출발 제품🚛"
-        ]
+        "kind": ["오늘 출발 제품🚛"]
       },
       {
         "type": "아우터",
-        "kind": [
-          "ALL",
-          "트위드",
-          "패딩",
-          "자켓",
-          "가디건",
-          "니트",
-          "조끼",
-          "점퍼",
-          "가죽&모피",
-          "셋업"
-        ]
+        "kind": ["ALL", "트위드", "패딩", "자켓", "가디건", "니트", "조끼", "점퍼", "가죽&모피", "셋업"]
       },
       {
         "type": "원피스",
@@ -1159,35 +1006,15 @@
       },
       {
         "type": "니트",
-        "kind": [
-          "ALL",
-          "긴소매",
-          "반소매",
-          "민소매",
-          "가디건"
-        ]
+        "kind": ["ALL", "긴소매", "반소매", "민소매", "가디건"]
       },
       {
         "type": "티셔츠",
-        "kind": [
-          "ALL",
-          "긴소매",
-          "반소매",
-          "민소매"
-        ]
+        "kind": ["ALL", "긴소매", "반소매", "민소매"]
       },
       {
         "type": "블라우스&셔츠",
-        "kind": [
-          "ALL",
-          "무지",
-          "셔츠",
-          "민소매",
-          "패턴",
-          "리본&타이",
-          "오프숄더",
-          "레이스"
-        ]
+        "kind": ["ALL", "무지", "셔츠", "민소매", "패턴", "리본&타이", "오프숄더", "레이스"]
       },
       {
         "type": "스커트",
@@ -1244,32 +1071,19 @@
       },
       {
         "type": "악세잡화",
-        "kind": [
-          "ALL",
-          "슈즈",
-          "가방",
-          "모자",
-          "주얼리",
-          "액세서리"
-        ]
+        "kind": ["ALL", "슈즈", "가방", "모자", "주얼리", "액세서리"]
       },
       {
         "type": "SALE",
-        "kind": [
-          "SALE"
-        ]
+        "kind": ["SALE"]
       },
       {
         "type": "EVENT🥳",
-        "kind": [
-          "EVENT🥳"
-        ]
+        "kind": ["EVENT🥳"]
       },
       {
         "type": "REVIEW",
-        "kind": [
-          "REVIEW"
-        ]
+        "kind": ["REVIEW"]
       }
     ]
   }
