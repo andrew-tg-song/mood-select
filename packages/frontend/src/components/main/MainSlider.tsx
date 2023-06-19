@@ -12,7 +12,7 @@ export default function MainSlider() {
   const items = data?.items;
 
   return (
-    <div>
+    <div className="w-[100%]">
       {isLoading ? (
         <p>Loading...</p>
       ) : error ? (
