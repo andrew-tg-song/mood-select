@@ -9,11 +9,13 @@ export class ProductCategory {
   name: string;
 
   @Column('number')
-  categoryLevel: 1 | 2 | 3;
+  categoryLevel: 1 | 2;
+
+  childrenCategories: ProductCategory[];
 
   @Column({
     type: 'number',
     nullable: true,
   })
-  parentCategory: number;
+  parentCategory?: ProductCategory;
 }

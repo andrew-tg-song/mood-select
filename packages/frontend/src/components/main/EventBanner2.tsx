@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchPromotionByTitle } from '../../apis/promotion';
-import { PromotionType } from '../../../../entity/src/promotion/promotion.entity';
+import { PromotionType } from 'entity';
 
 export default function EventBanner2() {
   const { isLoading, error, data } = useQuery(

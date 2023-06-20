@@ -1,7 +1,7 @@
-import { Promotion, PromotionType } from './../../../entity/src/promotion/promotion.entity';
+import { Promotion, PromotionType } from 'entity';
 
-export const bannersDataset: Record<string, Promotion> = {
-  mainBanners: {
+export const bannersDataset: Promotion[] = [
+  {
     id: 1686743683341,
     type: PromotionType.BANNER,
     title: 'mainBanners',
@@ -23,7 +23,7 @@ export const bannersDataset: Record<string, Promotion> = {
       },
     ],
   },
-  categoryBanners: {
+  {
     id: 1686745086899,
     type: PromotionType.BANNER,
     title: 'categoryBanners',
@@ -58,7 +58,7 @@ export const bannersDataset: Record<string, Promotion> = {
       },
     ],
   },
-  eventBanners1: {
+  {
     id: 1686747596166,
     type: PromotionType.BANNER,
     title: 'eventBanners1',
@@ -70,7 +70,7 @@ export const bannersDataset: Record<string, Promotion> = {
       },
     ],
   },
-  eventBanners2: {
+  {
     id: 1686747628463,
     type: PromotionType.BANNER,
     title: 'eventBanners2',
@@ -82,4 +82,4 @@ export const bannersDataset: Record<string, Promotion> = {
       },
     ],
   },
-};
+];

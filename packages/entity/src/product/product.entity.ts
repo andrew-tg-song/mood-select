@@ -1,4 +1,8 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import { ProductTag } from './product-tag.entity';
+import { ProductCategory } from './product-category.entity';
+import { ProductOption } from './product-option.entity';
+import { ProductThumbnail } from './product-thumbnail.entity';
 
 @Entity()
 export class Product {
@@ -23,5 +27,13 @@ export class Product {
   @UpdateDateColumn()
   updatedAt: Date;
 
-  // to do: category(가장 낮은 레벨), color, option(level 1), tag, thumbnail mapping
+  thumbnails: ProductThumbnail[];
+
+  categories: ProductCategory[];
+
+  tags: ProductTag[];
+
+  options: ProductOption[];
+
+  similarProducts: Product[];
 }

@@ -9,7 +9,7 @@ import PrevArrow from './PrevArrow';
 import Product, { ProductType } from '../product/Product';
 import { useRecoilState } from 'recoil';
 import { darkModeState } from '../../atoms/app-atoms';
-import { PromotionItem } from '../../../../entity/src/promotion/promotion-item.entity';
+import { PromotionItem } from 'entity';
 
 interface sliderProps {
   /** 커스텀 클래스 */
