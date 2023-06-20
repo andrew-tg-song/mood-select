@@ -36,10 +36,10 @@ export default function NavBar() {
       <div
         className={`${
           darkMode === 'light' ? 'bg-white border-[#dedede]' : 'bg-[#0f0f0f] border-[#3b3b3b]'
-        } w-full h-[120px] border-solid border-b-[0.6px]`}
+        } w-full lg:h-[120px] sm:h-[160px] h-[160px] border-solid border-b-[0.6px]`}
       >
-        <div className="w-11/12 h-[100%] mx-auto flex flex-row items-center justify-between relative">
-          <div className="w-[216px] h-[100%] flex items-center absolute left-[50%] ml-[-108px]">
+        <div className="w-11/12 h-[100%] mx-auto flex lg:flex-row sm:flex-col flex-col items-center lg:justify-between sm:justify-center justify-center relative">
+          <div className="w-[216px] h-auto flex items-center lg:absolute left-[50%] lg:ml-[-108px]">
             <img
               onClick={() => {
                 navigate('/');
@@ -49,7 +49,7 @@ export default function NavBar() {
             />
           </div>
 
-          <ul className="text-[#999999] text-[0.75rem] flex absolute right-0 cursor-pointer">
+          <ul className="text-[#999999] text-[0.75rem] flex lg:absolute right-0 cursor-pointer sm:mt-[10px] mt-[10px]">
             <li className="mr-[1.43rem]">로그인</li>
             <li className="mr-[1.43rem]">회원가입</li>
             <li className="mr-[1.43rem]">비회원 주문 조회</li>
@@ -62,22 +62,22 @@ export default function NavBar() {
       <div
         className={`${
           darkMode === 'light' ? 'bg-white border-[#dedede]' : 'bg-[#0f0f0f] border-[#3b3b3b]'
-        } w-full lg:h-[60px] border-solid border-b-[0.6px]`}
+        } w-full sm:h-[60px] h-[60px] border-solid border-b-[0.6px]`}
       >
-        <div className="xl:w-11/12 lg:w-[96%] h-[100%] mx-auto flex lg:flex-row lg:items-center lg:justify-between relative">
+        <div className="xl:w-11/12 sm:w-[96%] w-[96%] h-[100%] mx-auto flex flex-row items-center justify-between relative">
           <ul
             className={`${
               darkMode === 'light' ? 'text-black' : 'text-white'
-            } xl:w-9/12 lg:w-[86%] h-[100%] flex justify-between items-center xl:text-[0.875rem] lg:text-[0.75rem] cursor-pointer`}
+            } xl:w-9/12 lg:w-[86%] w-auto h-[100%] flex justify-between items-center xl:text-[0.875rem] lg:text-[0.75rem] sm:text-[0.875rem] text-[0.875rem] cursor-pointer`}
           >
-            <li onClick={() => setCategoryAppear(true)} className="cursor-pointer">
+            <li onClick={() => setCategoryAppear(true)} className=" cursor-pointer">
               <CiMenuBurger className={`${darkMode === 'light' ? 'text-black' : 'text-white'}`} />
             </li>
             <li
               onClick={() => {
                 navigate('/new');
               }}
-              className="text-[#FF5E5E]"
+              className="text-[#FF5E5E] lg:block sm:hidden hidden"
             >
               NEW
             </li>
@@ -85,12 +85,12 @@ export default function NavBar() {
               onClick={() => {
                 navigate('/best');
               }}
-              className="text-[#FF5E5E]"
+              className="text-[#FF5E5E] lg:block sm:hidden hidden"
             >
               BEST
             </li>
-            <li className="text-[#FF5E5E]">오늘 출발 제품🚛</li>
-            <li>
+            <li className="text-[#FF5E5E] lg:block sm:hidden hidden">오늘 출발 제품🚛</li>
+            <li className="xl:block sm:hidden hidden">
               <input
                 type="button"
                 value={title[0]}
@@ -99,7 +99,7 @@ export default function NavBar() {
                 }}
               />
             </li>
-            <li>
+            <li className="lg:block sm:hidden hidden">
               <input
                 type="button"
                 value={title[1]}
@@ -108,7 +108,7 @@ export default function NavBar() {
                 }}
               />
             </li>
-            <li>
+            <li className="lg:block sm:hidden hidden">
               <input
                 type="button"
                 value={title[2]}
@@ -117,7 +117,7 @@ export default function NavBar() {
                 }}
               />
             </li>
-            <li>
+            <li className="lg:block sm:hidden hidden">
               <input
                 type="button"
                 value={title[3]}
@@ -126,7 +126,7 @@ export default function NavBar() {
                 }}
               />
             </li>
-            <li>
+            <li className="lg:block sm:hidden hidden">
               <input
                 type="button"
                 value={title[4]}
@@ -135,7 +135,7 @@ export default function NavBar() {
                 }}
               />
             </li>
-            <li>
+            <li className="lg:block sm:hidden hidden">
               <input
                 type="button"
                 value={title[5]}
@@ -144,7 +144,7 @@ export default function NavBar() {
                 }}
               />
             </li>
-            <li>
+            <li className="lg:block sm:hidden hidden">
               <input
                 type="button"
                 value={title[6]}
@@ -153,7 +153,7 @@ export default function NavBar() {
                 }}
               />
             </li>
-            <li>
+            <li className="lg:block sm:hidden hidden">
               <input
                 type="button"
                 value={title[7]}
@@ -162,7 +162,7 @@ export default function NavBar() {
                 }}
               />
             </li>
-            <li>
+            <li className="lg:block sm:hidden hidden">
               <input
                 type="button"
                 value={title[8]}
@@ -171,33 +171,33 @@ export default function NavBar() {
                 }}
               />
             </li>
-            <li className="text-[#FF5EDB]">SALE</li>
-            <li className="text-[#FF5E5E]">EVENT🥳</li>
-            <li className="text-[#FF5E5E]">REVIEW</li>
+            <li className="text-[#FF5EDB] lg:block sm:hidden hidden">SALE</li>
+            <li className="text-[#FF5E5E] lg:block sm:hidden hidden">EVENT🥳</li>
+            <li className="text-[#FF5E5E] lg:block sm:hidden hidden">REVIEW</li>
           </ul>
 
           <ul
             className={`${
               darkMode === 'light' ? 'text-black' : 'text-white'
-            } xl:w-[12%] lg:w-[11%] h-[100%] flex justify-between items-center xl:text-[1.2rem] lg:text-[1.1rem] cursor-pointer`}
+            } xl:w-[12%] lg:w-[11%] sm:w-auto w-auto h-[100%] flex justify-between items-center xl:text-[1.2rem] lg:text-[1.1rem] sm:text-[1.2rem] text-[1.2rem] cursor-pointer`}
           >
-            <li>
+            <li className="lg:mx-0 sm:mx-2 mx-2">
               <CiSearch />
             </li>
-            <li className="relative">
+            <li className="relative lg:mx-0 sm:mx-2 mx-2">
               <div
                 className={`${
                   darkMode === 'light' ? 'bg-black ' : 'bg-[#FF5E5E]'
-                } absolute top-[-4px] right-[-6px] w-[0.9rem] h-[0.9rem]  rounded-full  text-[0.7rem] text-white font-light flex justify-center items-center`}
+                } absolute top-[-4px] right-[-6px] w-[0.9rem] h-[0.9rem] rounded-full text-[0.7rem] text-white font-light flex justify-center items-center`}
               >
                 {cartCount}
               </div>
               <GiShoppingCart />
             </li>
-            <li>
+            <li className="lg:mx-0 sm:mx-2 mx-2">
               <CiUser />
             </li>
-            <li className="relative">
+            <li className="relative lg:mx-0 sm:mx-2 mx-2">
               <div
                 className={`${
                   darkMode === 'light' ? 'bg-black ' : 'bg-[#FF5E5E]'
@@ -207,7 +207,9 @@ export default function NavBar() {
               </div>
               <CiHeart />
             </li>
-            <li onClick={toggleDarkMode}>{darkMode === 'dark' ? <CiLight /> : <CiDark />}</li>
+            <li className="lg:mx-0 sm:mx-2 mx-2" onClick={toggleDarkMode}>
+              {darkMode === 'dark' ? <CiLight /> : <CiDark />}
+            </li>
           </ul>
         </div>
       </div>
