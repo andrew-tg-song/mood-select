@@ -1,93 +1,56 @@
 [
   {
-    "main_slider": [
-      {
-        "id": "a08e1598-76f5-4a65-858b-55eb99b97792",
-        "image": "./img/main_slider_img.png"
-      },
-      {
-        "id": "39d39056-d7e7-432e-b387-3ca9a2ec46e5",
-        "image": "./img/main_slider_img_2.png"
-      },
-      {
-        "id": "ccc7b7ae-39e9-4308-a71e-54e69d275b53",
-        "image": "./img/main_slider_img_3.gif"
-      }
-    ],
-
-    "category_banner": [
-      {
-        "id": "9e11b598-77f8-47b4-8102-607e95d10b39",
-        "image": "./img/category_banner_1.png",
-        "title": "PANTS",
-        "desc": "언제 어디서든 편안하게"
-      },
-      {
-        "id": "de69ca88-08da-4b0b-8362-def2ba1a4368",
-        "image": "./img/category_banner_2.png",
-        "title": "ONE PIECE",
-        "desc": "어디서든 나를 돋보이게"
-      },
-      {
-        "id": "7acebdb0-1f0a-4fac-812e-6d7e98f85caa",
-        "image": "./img/category_banner_3.png",
-        "title": "CARDIGAN",
-        "desc": "어디서든 산뜻하게"
-      },
-      {
-        "id": "3de330a4-fa72-40a9-b1e8-5986f7790972",
-        "image": "./img/category_banner_4.png",
-        "title": "T-SHIRT",
-        "desc": "꾸민듯 안 꾸민듯 자연스럽게"
-      }
-    ],
-
-    "event_banner": { "id": "d9034ccb-9d3a-48c9-b38c-7f8b5027a1b9", "image": "./img/event_banner.png" },
-
-    "event_banner_2": {
-      "id": "da597cb8-85d9-4c4d-811f-5f10f7eb3545",
-      "image": "./img/event_banner.png"
-    },
-
     "best_products": [
       {
         "id": "a1d8a756-3ae9-43eb-a775-080709ec0ec5",
-        "image": "./img/best_product_1.png",
+        "imageUrl": "./img/best_product_1.png",
         "title": "오엘루 링클 셔링 리본 롱 원피스",
-        "desc": "부드럽고 가벼운 링클 원단으로 착용감이 매우 편안하며 섬세한 셔링 디테일이 여리하고 청초한 분위기를 더해준답니다 :)"
+        "description": "부드럽고 가벼운 링클 원단으로 착용감이 매우 편안하며 섬세한 셔링 디테일이 여리하고 청초한 분위기를 더해준답니다 :)"
       },
       {
         "id": "3bbeb569-b89d-462b-a832-68744a1f3d11",
-        "image": "./img/best_product_2.png",
+        "imageUrl": "./img/best_product_2.png",
         "title": "로앤브 세미크롭 투웨이 세일러카라 집업",
-        "desc": "세미크롭에 투웨이 디테일로 다양하게 연출하기 좋으며 소재까지 부드럽답니다 :)"
+        "description": "세미크롭에 투웨이 디테일로 다양하게 연출하기 좋으며 소재까지 부드럽답니다 :)"
       },
       {
         "id": "46e34bbc-9326-484b-b0f2-81b05beae3d6",
-        "image": "./img/best_product_3.png",
+        "imageUrl": "./img/best_product_3.png",
         "title": "피에로 밴딩 와이드 팬츠",
-        "desc": "편하게 자주 입히는 여유있는 와이드 핏의 밴딩 팬츠에요 찰랑거리는 가벼운 소재로 피부에 닿는 감촉도 좋답니다:)"
+        "description": "편하게 자주 입히는 여유있는 와이드 핏의 밴딩 팬츠에요 찰랑거리는 가벼운 소재로 피부에 닿는 감촉도 좋답니다:)"
       },
       {
         "id": "fa0df439-e227-405e-bc4b-09fb0b71a749",
-        "image": "./img/best_product_4.png",
+        "imageUrl": "./img/best_product_4.png",
         "title": "베티론 플리츠 뷔스티에 롱 원피스 (끈조절)",
-        "desc": "플리츠 스커트에 뷔스티에 디테일로 여성스럽게 연출하기 좋은 원피스 :)"
+        "description": "플리츠 스커트에 뷔스티에 디테일로 여성스럽게 연출하기 좋은 원피스 :)"
       },
       {
         "id": "edb6eb60-bd05-49ff-bae8-f7e3521b5ed7",
-        "image": "./img/best_product_5.png",
+        "imageUrl": "./img/best_product_5.png",
         "title": "젠다링 자켓 밴딩 와이드 팬츠 투피스 세트",
-        "desc": "원버튼 자켓과 밴딩 와이드 팬츠가 세트인 투피스 아이템이랍니다 따로 또 같이 착용하기 너무 좋아요 실용도 높은 세트로 강추드려요 (:"
+        "description": "원버튼 자켓과 밴딩 와이드 팬츠가 세트인 투피스 아이템이랍니다 따로 또 같이 착용하기 너무 좋아요 실용도 높은 세트로 강추드려요 (:"
       }
     ],
-
     "new_products": [
       {
         "id": "d9034ccb-9d3a-48c9-b38c-7f8b5027a1b9",
         "title": "브릿느 배색 세미크롭 퍼프 자켓1",
         "desc": "세미크롭에 퍼프소매, 배색 바인딩으로 포인트를 준 여성스러운 자켓 :)",
-        "color": ["black", "ivory", "pink"],
+        "color": [
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          },
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "pink",
+            "image": "/img/color-pink.png"
+          }
+        ],
         "image": "./img/new_product_1.png",
         "price": 41000,
         "salePrice": 37620,
@@ -97,7 +60,16 @@
         "id": "da597cb8-85d9-4c4d-811f-5f10f7eb3545",
         "title": "[웨딩룩] 웨린브 하트넥 머메이드 롱 원피스2",
         "desc": "머메이드 라인으로 고급스러운 무드의 셀프 웨딩,브라이덜 샤워, 돌잔치 등 다양한 상황에 맞게 착용하기 좋아 강추드린답니다",
-        "color": ["black", "white"],
+        "color": [
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          },
+          {
+            "name": "white",
+            "image": "/img/color-white.png"
+          }
+        ],
         "image": "./img/new_product_2.png",
         "price": 44900,
         "salePrice": 40410,
@@ -108,7 +80,20 @@
         "image": "./img/best_product_2.png",
         "title": "로앤브 세미크롭 투웨이 세일러카라 집업",
         "desc": "세미크롭에 투웨이 디테일로 다양하게 연출하기 좋으며 소재까지 부드럽답니다 :)",
-        "color": ["black", "ivory", "pink"],
+        "color": [
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "pink",
+            "image": "/img/color-pink.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 41000,
         "salePrice": 37620,
         "banner": ["NEW", "무료 배송"]
@@ -118,7 +103,16 @@
         "image": "./img/new_product_3.png",
         "title": "히크네린 트위드 크롭 뒷밴딩 투피스 세트",
         "desc": "러블리한 무드가 가득한 트위드 투피스에요 하객룩, 데이트룩 등 다양하게 코디하기 좋아요 :)",
-        "color": ["black", "pink"],
+        "color": [
+          {
+            "name": "pink",
+            "image": "/img/color-pink.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 63900,
         "salePrice": 57510,
         "banner": ["BEST", "NEW"]
@@ -128,7 +122,16 @@
         "image": "./img/new_product_4.png",
         "title": "티런브 배색 니트 가디건 나시 투피스 세트",
         "desc": "세미 크롭 길이감과 내추럴한 핏으로 깔끔하게 착용하기 좋은 아이템이에요 :)",
-        "color": ["black", "pink"],
+        "color": [
+          {
+            "name": "pink",
+            "image": "/img/color-pink.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 63900,
         "salePrice": 57510,
         "banner": ["BEST", "NEW", "무료 배송"]
@@ -138,7 +141,16 @@
         "image": "./img/best_product_4.png",
         "title": "베티론 플리츠 뷔스티에 롱 원피스 (끈조절)",
         "desc": "플리츠 스커트에 뷔스티에 디테일로 여성스럽게 연출하기 좋은 원피스 :)",
-        "color": ["black", "yello"],
+        "color": [
+          {
+            "name": "yellow",
+            "image": "/img/color-yellow.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 59100,
         "salePrice": 42500,
         "banner": ["NEW", "무료 배송"]
@@ -148,7 +160,16 @@
         "image": "./img/new_product_5.png",
         "title": "레나잇 포켓 뒷밴딩 미니 스커트6",
         "desc": "데일리한 매력의 귀여운 미니기장의 스커트에요 :)",
-        "color": ["white", "ivory"],
+        "color": [
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "white",
+            "image": "/img/color-white.png"
+          }
+        ],
         "price": 19550,
         "salePrice": 17540,
         "banner": ["BEST", "NEW", "무료 배송"]
@@ -158,20 +179,37 @@
         "image": "./img/new_product_6.png",
         "title": "로디몰리 레터링 나시 볼레로 투피스 세트",
         "desc": "하트 레터링 디자인으로 키치한 무드로 입기 좋은 투피스 세트에요 :)",
-        "color": ["white", "black"],
+        "color": [
+          {
+            "name": "white",
+            "image": "/img/color-white.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 38800,
         "salePrice": 34920,
         "banner": ["BEST", "NEW", "무료 배송"]
       }
     ],
-
     "today_delivery_products": [
       {
         "id": "a1d8a756-3ae9-43eb-a775-080709ec0ec5",
         "image": "./img/best_product_3.png",
         "title": "히크네린 트위드 크롭 뒷밴딩 투피스 세트",
         "desc": "러블리한 무드가 가득한 트위드 투피스에요 하객룩, 데이트룩 등 다양하게 코디하기 좋아요 :)",
-        "color": ["black", "pink"],
+        "color": [
+          {
+            "name": "pink",
+            "image": "/img/color-pink.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 63900,
         "salePrice": 57510,
         "banner": ["BEST"]
@@ -181,7 +219,16 @@
         "image": "./img/best_product_6.png",
         "title": "로디몰리 레터링 나시 볼레로 투피스 세트",
         "desc": "하트 레터링 디자인으로 키치한 무드로 입기 좋은 투피스 세트에요 :)",
-        "color": ["white", "black"],
+        "color": [
+          {
+            "name": "white",
+            "image": "/img/color-white.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 38800,
         "salePrice": 34920,
         "banner": ["BEST", "NEW"]
@@ -191,7 +238,16 @@
         "image": "./img/today_delivery_product_1.png",
         "title": "앤유브 스판 배색 루즈핏 니트 나시",
         "desc": "루즈한 핏감과 배색 포인트로 데일리로 착용하기 좋은 나시에요 다양한 하의와 매치하기 좋아요 :)",
-        "color": ["black", "blue"],
+        "color": [
+          {
+            "name": "blue",
+            "image": "/img/color-blue.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 17900,
         "salePrice": 16100,
         "banner": ["BEST", "NEW", "무료 배송"]
@@ -201,7 +257,20 @@
         "image": "./img/today_delivery_product_2.png",
         "title": "리웨즈 니트 루즈핏 스퀘어넥 나시",
         "desc": "어디에나 잘 어울리는 니트 나시로 데일리템으로 추천드려요 :)",
-        "color": ["black", "ivory", "blue"],
+        "color": [
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "blue",
+            "image": "/img/color-blue.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 22800,
         "salePrice": 20520,
         "banner": ["무료 배송"]
@@ -211,7 +280,16 @@
         "image": "./img/today_delivery_product_3.png",
         "title": "펠로킹 체크 시스루 루즈핏 셔츠",
         "desc": "하늘하늘한 소재와 베이직한 디자인으로 활용도가 높은 셔츠 소개드려요:)",
-        "color": ["black", "blue"],
+        "color": [
+          {
+            "name": "blue",
+            "image": "/img/color-blue.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 26800,
         "salePrice": 24120,
         "banner": ["NEW", "무료 배송"]
@@ -221,7 +299,12 @@
         "image": "./img/today_delivery_product_4.png",
         "title": "로알빈 트위드 배색 크롭 자켓",
         "desc": "넥라인과 포켓 배색 디테일로 포인트를 더해주며 크롭한 기장감으로 롱한 레그 라인 연출이 된답니다 :)",
-        "color": ["black"],
+        "color": [
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 41500,
         "salePrice": 37350,
         "banner": ["BEST", "NEW", "무료 배송"]
@@ -231,7 +314,16 @@
         "image": "./img/today_delivery_product_5.png",
         "title": "로로블링 배색 가디건 나시 원피스 투피스 세트 (끈조절)",
         "desc": "배색 디자인의 가디건 + 원피스 세트로 러블리한 무드가 가득한 투피스에요 단독, 세트로 각각 활용도가 높답니다 :)",
-        "color": ["black", "ivory"],
+        "color": [
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 45900,
         "salePrice": 41310,
         "banner": ["무료 배송"]
@@ -241,7 +333,16 @@
         "image": "./img/today_delivery_product_6.png",
         "title": "슈어드리 플라워 레이스 뷔스티에 원피스 (끈조절)",
         "desc": "잔잔한 플라워 패턴과 레이스 디자인으로 여성스러움이 돋보이는 뷔스티에 원피스에요 :)",
-        "color": ["black", "ivory"],
+        "color": [
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 34900,
         "salePrice": 31140,
         "banner": ["BEST", "NEW"]
@@ -250,42 +351,62 @@
     "products": [
       {
         "id": "025a470b-579b-48fb-8f92-a206b3c673a1",
-
         "typeA": "블라우스&셔츠",
-        "typeB": "셔츠",
+        "typeB": ["셔츠"],
         "mood": "cool",
         "new": false,
         "best": true,
         "todayDelivery": true,
-
         "image": "/img/today_delivery_product_3.png",
         "image2": "/img/product_1-2.png",
         "image3": "/img/product_1-3.png",
         "image4": "/img/product_1-4.png",
         "image5": "/img/product_1-5.png",
-
         "title": "펠로킹 체크 시스루 루즈핏 셔츠",
         "desc": "하늘하늘한 소재와 베이직한 디자인으로 활용도가 높은 셔츠 소개드려요:)",
-        "color": ["black", "blue"],
+        "color": [
+          {
+            "name": "gray",
+            "image": "/img/color-gray.png"
+          },
+          {
+            "name": "lavender",
+            "image": "/img/color-lavender.png"
+          },
+          {
+            "name": "white",
+            "image": "/img/color-white.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          },
+          {
+            "name": "yellowgreen",
+            "image": "/img/color-yellowgreen"
+          }
+        ],
         "price": 26800,
         "salePrice": 24120,
         "banner": ["NEW", "무료 배송"],
-        "option": { "size": ["44~88", "99~120(+1,000won)"] },
+        "option": {
+          "size": ["44~88", "99~120(+1,000won)"]
+        },
         "detail": {
-          "detailEventBanner": ["./img/detail_event_banner_1.png", "./img/detail_event_banner_2.png"],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
-            "./img/detail_1-1.png",
-            "./img/detail_1-2.png",
-            "./img/detail_1-3.png",
-            "./img/detail_1-4.png",
-            "./img/detail_1-5.png",
-            "./img/detail_1-6.png",
-            "./img/detail_1-7.png",
-            "./img/detail_1-8.png",
-            "./img/detail_1-9.png",
-            "./img/detail_1-10.png",
-            "./img/detail_1-11.png",
-            "./img/detail_1-12.png"
+            "/img/detail_1-1.png",
+            "/img/detail_1-2.png",
+            "/img/detail_1-3.png",
+            "/img/detail_1-4.png",
+            "/img/detail_1-5.png",
+            "/img/detail_1-6.png",
+            "/img/detail_1-7.png",
+            "/img/detail_1-8.png",
+            "/img/detail_1-9.png",
+            "/img/detail_1-10.png",
+            "/img/detail_1-11.png",
+            "/img/detail_1-12.png"
           ],
           "review": {},
           "question": {}
@@ -293,55 +414,75 @@
       },
       {
         "id": "07a50e87-6bb3-499f-83c6-d9f82744da6d",
-
         "typeA": "원피스",
-        "typeB": "롱",
+        "typeB": ["롱"],
         "mood": "cute",
         "new": true,
         "best": true,
         "todayDelivery": false,
-
         "image": "/img/product_2-1.png",
         "image2": "/img/product_2-2.png",
         "image3": "/img/product_2-3.png",
         "image4": "/img/product_2-4.png",
         "image5": "/img/product_2-5.png",
-
         "title": "퍼벨린 트위드 카라넥 롱 원피스",
         "desc": "고급스러운 트위드 소재의 맞주름 디테일로 체형커버도 가능한 롱 원피스에요 !",
-        "color": ["black", "pink"],
+        "color": [
+          {
+            "name": "pink",
+            "image": "/img/color-pink.png"
+          },
+          {
+            "name": "mint",
+            "image": "/img/color-mint.png"
+          },
+          {
+            "name": "white",
+            "image": "/img/color-white.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          },
+          {
+            "name": "deeppink",
+            "image": "/img/color-deeppink.png"
+          }
+        ],
         "price": 52900,
         "salePrice": 47610,
         "banner": ["NEW", "BEST", "무료 배송"],
-        "option": { "size": ["Free"] },
+        "option": {
+          "size": ["Free"]
+        },
         "detail": {
-          "detailEventBanner": ["./img/detail_event_banner_1.png", "./img/detail_event_banner_2.png"],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
-            "./img/detail_2-1.png",
-            "./img/detail_2-2.png",
-            "./img/detail_2-3.png",
-            "./img/detail_2-4.png",
-            "./img/detail_2-5.png",
-            "./img/detail_2-6.png",
-            "./img/detail_2-7.png",
-            "./img/detail_2-8.png",
-            "./img/detail_2-9.png",
-            "./img/detail_2-10.png",
-            "./img/detail_2-11.png",
-            "./img/detail_2-12.png",
-            "./img/detail_2-13.png",
-            "./img/detail_2-14.png",
-            "./img/detail_2-15.png",
-            "./img/detail_2-16.png",
-            "./img/detail_2-17.png",
-            "./img/detail_2-18.png",
-            "./img/detail_2-19.png",
-            "./img/detail_2-20.png",
-            "./img/detail_2-21.png",
-            "./img/detail_2-22.png",
-            "./img/detail_2-23.png",
-            "./img/detail_2-24.png",
-            "./img/detail_2-25.png"
+            "/img/detail_2-1.png",
+            "/img/detail_2-2.png",
+            "/img/detail_2-3.gif",
+            "/img/detail_2-4.gif",
+            "/img/detail_2-5.gif",
+            "/img/detail_2-6.png",
+            "/img/detail_2-7.png",
+            "/img/detail_2-8.png",
+            "/img/detail_2-9.png",
+            "/img/detail_2-10.png",
+            "/img/detail_2-11.png",
+            "/img/detail_2-12.png",
+            "/img/detail_2-13.png",
+            "/img/detail_2-14.png",
+            "/img/detail_2-15.png",
+            "/img/detail_2-16.png",
+            "/img/detail_2-17.png",
+            "/img/detail_2-18.png",
+            "/img/detail_2-19.png",
+            "/img/detail_2-20.png",
+            "/img/detail_2-21.png",
+            "/img/detail_2-22.png",
+            "/img/detail_2-23.png",
+            "/img/detail_2-24.png",
+            "/img/detail_2-25.png"
           ],
           "review": {},
           "question": {}
@@ -349,55 +490,479 @@
       },
       {
         "id": "a2dc57c2-65f7-4b5e-9c74-f455c85cd7c0",
-
         "typeA": "원피스",
         "typeB": "미니",
         "mood": "lovely",
         "new": false,
         "best": true,
         "todayDelivery": true,
-
         "image": "/img/product_3-1.png",
         "image2": "/img/product_3-2.png",
         "image3": "/img/product_3-3.png",
         "image4": "/img/product_3-4.png",
         "image5": "/img/product_3-5.png",
-
         "title": "페어리 날개소매 쉬폰 미니 원피스",
         "desc": "꽃잎결처럼 여리하게 떨어지는 소매와 스커트 실루엣",
-        "color": ["ivory", "plack"],
+        "color": [
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "mint",
+            "image": "/img/color-mint.png"
+          },
+          {
+            "name": "white",
+            "image": "/img/color-white.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
         "price": 70000,
         "salePrice": 49800,
         "banner": ["BEST", "무료 배송"],
-        "option": { "size": ["M"] },
+        "option": {
+          "size": ["M"]
+        },
         "detail": {
-          "detailEventBanner": ["./img/detail_event_banner_1.png", "./img/detail_event_banner_2.png"],
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
           "detailImage": [
-            "./img/detail_2-1.png",
-            "./img/detail_2-2.png",
-            "./img/detail_2-3.png",
-            "./img/detail_2-4.png",
-            "./img/detail_2-5.png",
-            "./img/detail_2-6.png",
-            "./img/detail_2-7.png",
-            "./img/detail_2-8.png",
-            "./img/detail_2-9.png",
-            "./img/detail_2-10.png",
-            "./img/detail_2-11.png",
-            "./img/detail_2-12.png",
-            "./img/detail_2-13.png",
-            "./img/detail_2-14.png",
-            "./img/detail_2-15.png",
-            "./img/detail_2-16.png",
-            "./img/detail_2-17.png",
-            "./img/detail_2-18.png",
-            "./img/detail_2-19.png",
-            "./img/detail_2-20.png",
-            "./img/detail_2-21.png",
-            "./img/detail_2-22.png",
-            "./img/detail_2-23.png",
-            "./img/detail_2-24.png",
-            "./img/detail_2-25.png"
+            "/img/detail_2-1.png",
+            "/img/detail_2-2.png",
+            "/img/detail_2-3.gif",
+            "/img/detail_2-4.gif",
+            "/img/detail_2-5.gif",
+            "/img/detail_2-6.png",
+            "/img/detail_2-7.png",
+            "/img/detail_2-8.png",
+            "/img/detail_2-9.png",
+            "/img/detail_2-10.png",
+            "/img/detail_2-11.png",
+            "/img/detail_2-12.png",
+            "/img/detail_2-13.png",
+            "/img/detail_2-14.png",
+            "/img/detail_2-15.png",
+            "/img/detail_2-16.png",
+            "/img/detail_2-17.png",
+            "/img/detail_2-18.png",
+            "/img/detail_2-19.png",
+            "/img/detail_2-20.png",
+            "/img/detail_2-21.png",
+            "/img/detail_2-22.png",
+            "/img/detail_2-23.png",
+            "/img/detail_2-24.png",
+            "/img/detail_2-25.png"
+          ],
+          "review": {},
+          "question": {}
+        }
+      },
+      {
+        "id": "a8f06afe-143b-484d-85d4-b4bba4f38687",
+        "typeA": "원피스",
+        "typeB": ["미니", "롱"],
+        "mood": "lovely",
+        "new": true,
+        "best": true,
+        "todayDelivery": true,
+        "image": "/img/product_4-1.png",
+        "image2": "/img/product_4-2.png",
+        "image3": "/img/product_4-3.png",
+        "image4": "/img/product_4-4.png",
+        "image5": "/img/product_4-5.png",
+        "title": "리움 하트넥 트위드 여름 원피스",
+        "desc": "나의 특별한 날을 위한 우아한 아웃핏",
+        "color": [
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "pink",
+            "image": "/img/color-pink.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          }
+        ],
+        "price": 89000,
+        "salePrice": 66750,
+        "banner": ["NEW", "BEST", "무료 배송"],
+        "option": {
+          "size": ["S(미니)", "M(미니)", "S(롱) + 4,000", "M(롱) + 4,000", "XS(미니)", "XS(롱)"]
+        },
+        "detail": {
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
+          "detailImage": [
+            "/img/detail_4-1.gif",
+            "/img/detail_4-2.png",
+            "/img/detail_4-3.png",
+            "/img/detail_4-4.gif",
+            "/img/detail_4-5.png",
+            "/img/detail_4-6.png",
+            "/img/detail_4-7.png",
+            "/img/detail_4-8.png",
+            "/img/detail_4-9.png",
+            "/img/detail_4-10.png",
+            "/img/detail_4-11.png",
+            "/img/detail_4-12.png",
+            "/img/detail_4-13.png",
+            "/img/detail_4-14.png",
+            "/img/detail_4-15.png",
+            "/img/detail_4-16.png",
+            "/img/detail_4-17.png",
+            "/img/detail_4-18.png",
+            "/img/detail_4-19.png",
+            "/img/detail_4-20.png",
+            "/img/detail_4-21.png",
+            "/img/detail_4-22.png",
+            "/img/detail_4-23.png",
+            "/img/detail_4-24.png",
+            "/img/detail_4-25.png",
+            "/img/detail_4-26.png",
+            "/img/detail_4-27.png",
+            "/img/detail_4-28.png",
+            "/img/detail_4-29.png",
+            "/img/detail_4-30.png",
+            "/img/detail_4-31.png",
+            "/img/detail_4-32.png",
+            "/img/detail_4-33.png"
+          ],
+          "review": {},
+          "question": {}
+        }
+      },
+      {
+        "id": "9580d598-10d6-43c7-a4f2-4e9c8a344528",
+        "typeA": "티셔츠",
+        "typeB": ["긴소매"],
+        "mood": "lovely",
+        "new": true,
+        "best": true,
+        "todayDelivery": false,
+        "image": "/img/product_5-1.png",
+        "image2": "/img/product_5-2.png",
+        "image3": "/img/product_5-3.png",
+        "image4": "/img/product_5-4.png",
+        "image5": "/img/product_5-5.png",
+        "title": "텐션감이 좋은 슬림핏 라운드넥 긴팔 티셔츠",
+        "desc": "쫀득한 신축성으로 바디라인에 착붙! 슬림핏 라운드넥 긴팔티",
+        "color": [
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "brown",
+            "image": "/img/color-brown.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          },
+          {
+            "name": "pink",
+            "image": "/img/color-pink.png"
+          },
+          {
+            "name": "skyblue",
+            "image": "/img/color-skyblue.png"
+          },
+          {
+            "name": "beige",
+            "image": "/img/color-beige.png"
+          }
+        ],
+        "price": 26000,
+        "salePrice": 19800,
+        "banner": ["NEW", "BEST"],
+        "option": {
+          "size": ["free"]
+        },
+        "detail": {
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
+          "detailImage": [
+            "/img/detail_5-1.gif",
+            "/img/detail_5-2.png",
+            "/img/detail_5-3.png",
+            "/img/detail_5-4.png",
+            "/img/detail_5-5.png",
+            "/img/detail_5-6.png",
+            "/img/detail_5-7.png",
+            "/img/detail_5-8.png",
+            "/img/detail_5-9.png",
+            "/img/detail_5-10.png",
+            "/img/detail_5-11.png",
+            "/img/detail_5-12.png",
+            "/img/detail_5-13.png",
+            "/img/detail_5-14.png",
+            "/img/detail_5-15.png",
+            "/img/detail_5-16.png",
+            "/img/detail_5-17.png",
+            "/img/detail_5-18.png",
+            "/img/detail_5-19.png",
+            "/img/detail_5-20.png",
+            "/img/detail_5-21.png",
+            "/img/detail_5-22.png",
+            "/img/detail_5-23.png",
+            "/img/detail_5-24.png",
+            "/img/detail_5-25.png",
+            "/img/detail_5-26.png",
+            "/img/detail_5-27.png",
+            "/img/detail_5-28.png"
+          ],
+          "review": {},
+          "question": {}
+        }
+      },
+      {
+        "id": "43a2ef68-c4cb-498b-a1a3-fa84caa6ee32",
+        "typeA": "티셔츠",
+        "typeB": ["긴소매"],
+        "mood": "lovely",
+        "new": false,
+        "best": true,
+        "todayDelivery": false,
+        "image": "/img/product_6-1.png",
+        "image2": "/img/product_6-2.png",
+        "image3": "/img/product_6-3.png",
+        "image4": "/img/product_6-4.png",
+        "image5": "/img/product_6-5.png",
+        "title": "[세트템/살안타템] 디토 셔링 랩티셔츠 세트",
+        "desc": "산뜻한 봄 날씨부터 무더운 여름까지 즐기기 좋은 투웨이 디자인의 셔링 랩 티셔츠 + 나시 세트",
+        "color": [
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "cream",
+            "image": "/img/color-cream.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          },
+          {
+            "name": "skyblue",
+            "image": "/img/color-skyblue.png"
+          }
+        ],
+        "price": 40000,
+        "salePrice": 29500,
+        "banner": ["BEST"],
+        "option": {
+          "size": ["free"]
+        },
+        "detail": {
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
+          "detailImage": [
+            "/img/detail_5-1.gif",
+            "/img/detail_5-2.png",
+            "/img/detail_5-3.png",
+            "/img/detail_5-4.png",
+            "/img/detail_5-5.png",
+            "/img/detail_5-6.png",
+            "/img/detail_5-7.png",
+            "/img/detail_5-8.png",
+            "/img/detail_5-9.png",
+            "/img/detail_5-10.png",
+            "/img/detail_5-11.png",
+            "/img/detail_5-12.png",
+            "/img/detail_5-13.png",
+            "/img/detail_5-14.png",
+            "/img/detail_5-15.png",
+            "/img/detail_5-16.png",
+            "/img/detail_5-17.png",
+            "/img/detail_5-18.png",
+            "/img/detail_5-19.png",
+            "/img/detail_5-20.png",
+            "/img/detail_5-21.png",
+            "/img/detail_5-22.png",
+            "/img/detail_5-23.png",
+            "/img/detail_5-24.png",
+            "/img/detail_5-25.png",
+            "/img/detail_5-26.png",
+            "/img/detail_5-27.png",
+            "/img/detail_5-28.png"
+          ],
+          "review": {},
+          "question": {},
+          "similar": {
+            "id": "9580d598-10d6-43c7-a4f2-4e9c8a344528",
+            "typeA": "티셔츠",
+            "typeB": ["긴소매"],
+            "mood": "lovely",
+            "new": true,
+            "best": true,
+            "todayDelivery": false,
+            "image": "/img/product_5-1.png",
+            "image2": "/img/product_5-2.png",
+            "image3": "/img/product_5-3.png",
+            "image4": "/img/product_5-4.png",
+            "image5": "/img/product_5-5.png",
+            "title": "텐션감이 좋은 슬림핏 라운드넥 긴팔 티셔츠",
+            "desc": "쫀득한 신축성으로 바디라인에 착붙! 슬림핏 라운드넥 긴팔티",
+            "color": [
+              {
+                "name": "ivory",
+                "image": "/img/color-ivory.png"
+              },
+              {
+                "name": "brown",
+                "image": "/img/color-brown.png"
+              },
+              {
+                "name": "black",
+                "image": "/img/color-black.png"
+              },
+              {
+                "name": "pink",
+                "image": "/img/color-pink.png"
+              },
+              {
+                "name": "skyblue",
+                "image": "/img/color-skyblue.png"
+              },
+              {
+                "name": "beige",
+                "image": "/img/color-beige.png"
+              }
+            ],
+            "price": 26000,
+            "salePrice": 19800,
+            "banner": ["NEW", "BEST"],
+            "option": {
+              "size": ["free"]
+            },
+            "detail": {
+              "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
+              "detailImage": [
+                "/img/detail_5-1.gif",
+                "/img/detail_5-2.png",
+                "/img/detail_5-3.png",
+                "/img/detail_5-4.png",
+                "/img/detail_5-5.png",
+                "/img/detail_5-6.png",
+                "/img/detail_5-7.png",
+                "/img/detail_5-8.png",
+                "/img/detail_5-9.png",
+                "/img/detail_5-10.png",
+                "/img/detail_5-11.png",
+                "/img/detail_5-12.png",
+                "/img/detail_5-13.png",
+                "/img/detail_5-14.png",
+                "/img/detail_5-15.png",
+                "/img/detail_5-16.png",
+                "/img/detail_5-17.png",
+                "/img/detail_5-18.png",
+                "/img/detail_5-19.png",
+                "/img/detail_5-20.png",
+                "/img/detail_5-21.png",
+                "/img/detail_5-22.png",
+                "/img/detail_5-23.png",
+                "/img/detail_5-24.png",
+                "/img/detail_5-25.png",
+                "/img/detail_5-26.png",
+                "/img/detail_5-27.png",
+                "/img/detail_5-28.png"
+              ],
+              "review": {},
+              "question": {}
+            }
+          }
+        }
+      },
+      {
+        "id": "8bd40b84-062c-4dd2-810e-10b6ba4b2044",
+        "typeA": "티셔츠",
+        "typeB": ["반소매"],
+        "mood": "lovely",
+        "new": true,
+        "best": false,
+        "todayDelivery": false,
+        "image": "/img/product_7-1.png",
+        "image2": "/img/product_7-2.png",
+        "image3": "/img/product_7-3.png",
+        "image4": "/img/product_7-4.png",
+        "image5": "/img/product_7-5.png",
+        "title": "(1+1) 쫀득한 터칭감의 라운드넥 4부 소매 반팔 티셔츠 tee 여름 티셔츠",
+        "desc": "1+1 가성비 GOOD!☆ 합리적인 가격으로 스타일링을 완성해주는 라운드넥 4부 소매 반팔 티셔츠",
+        "color": [
+          {
+            "name": "yellow",
+            "image": "/img/color-yellow.png"
+          },
+          {
+            "name": "lavender",
+            "image": "/img/color-lavender.png"
+          },
+          {
+            "name": "yellowgreen",
+            "image": "/img/color-yellowgreen.png"
+          },
+          {
+            "name": "orange",
+            "image": "/img/color-orange.png"
+          },
+          {
+            "name": "pink",
+            "image": "/img/color-pink.png"
+          },
+          {
+            "name": "black",
+            "image": "/img/color-black.png"
+          },
+          {
+            "name": "ivory",
+            "image": "/img/color-ivory.png"
+          },
+          {
+            "name": "skyblue",
+            "image": "/img/color-skyblue.png"
+          }
+        ],
+        "price": 24000,
+        "salePrice": 16800,
+        "banner": ["NEW", "무료 배송"],
+        "option": {
+          "size": ["free"]
+        },
+        "detail": {
+          "detailEventBanner": ["/img/detail_event_banner_1.png", "/img/detail_event_banner_2.png"],
+          "detailImage": [
+            "/img/detail_5-1.gif",
+            "/img/detail_5-2.png",
+            "/img/detail_5-3.png",
+            "/img/detail_5-4.png",
+            "/img/detail_5-5.png",
+            "/img/detail_5-6.png",
+            "/img/detail_5-7.png",
+            "/img/detail_5-8.png",
+            "/img/detail_5-9.png",
+            "/img/detail_5-10.png",
+            "/img/detail_5-11.png",
+            "/img/detail_5-12.png",
+            "/img/detail_5-13.png",
+            "/img/detail_5-14.png",
+            "/img/detail_5-15.png",
+            "/img/detail_5-16.png",
+            "/img/detail_5-17.png",
+            "/img/detail_5-18.png",
+            "/img/detail_5-19.png",
+            "/img/detail_5-20.png",
+            "/img/detail_5-21.png",
+            "/img/detail_5-22.png",
+            "/img/detail_5-23.png",
+            "/img/detail_5-24.png",
+            "/img/detail_5-25.png",
+            "/img/detail_5-26.png",
+            "/img/detail_5-27.png",
+            "/img/detail_5-28.png"
           ],
           "review": {},
           "question": {}
@@ -405,9 +970,18 @@
       }
     ],
     "category": [
-      { "type": "NEW", "kind": ["NEW"] },
-      { "type": "BEST", "kind": ["BEST"] },
-      { "type": "오늘 출발 제품🚛", "Kind": ["오늘 출발 제품🚛"] },
+      {
+        "type": "NEW",
+        "kind": ["NEW"]
+      },
+      {
+        "type": "BEST",
+        "kind": ["BEST"]
+      },
+      {
+        "type": "오늘 출발 제품 🚛",
+        "kind": ["오늘 출발 제품 🚛"]
+      },
       {
         "type": "아우터",
         "kind": ["ALL", "트위드", "패딩", "자켓", "가디건", "니트", "조끼", "점퍼", "가죽&모피", "셋업"]
@@ -430,9 +1004,18 @@
           "플레어"
         ]
       },
-      { "type": "니트", "kind": ["ALL", "긴소매", "반소매", "민소매", "가디건"] },
-      { "type": "티셔츠", "kind": ["ALL", "긴소매", "반소매", "민소매"] },
-      { "type": "블라우스&셔츠", "kind": ["ALL", "무지", "셔츠", "민소매", "패턴", "리본&타이", "오프숄더", "레이스"] },
+      {
+        "type": "니트",
+        "kind": ["ALL", "긴소매", "반소매", "민소매", "가디건"]
+      },
+      {
+        "type": "티셔츠",
+        "kind": ["ALL", "긴소매", "반소매", "민소매"]
+      },
+      {
+        "type": "블라우스&셔츠",
+        "kind": ["ALL", "무지", "셔츠", "민소매", "패턴", "리본&타이", "오프숄더", "레이스"]
+      },
       {
         "type": "스커트",
         "kind": [
@@ -486,7 +1069,22 @@
           "스타킹"
         ]
       },
-      { "type": "악세잡화", "kind": ["ALL", "슈즈", "가방", "모자", "주얼리", "액세서리"] }
+      {
+        "type": "악세잡화",
+        "kind": ["ALL", "슈즈", "가방", "모자", "주얼리", "액세서리"]
+      },
+      {
+        "type": "SALE",
+        "kind": ["SALE"]
+      },
+      {
+        "type": "EVENT🥳",
+        "kind": ["EVENT🥳"]
+      },
+      {
+        "type": "REVIEW",
+        "kind": ["REVIEW"]
+      }
     ]
   }
 ]

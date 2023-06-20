@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { search } from '../../ShoppingMallProducts';
+import { search } from '../../apis/ShoppingMallProducts';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export default function ProductNav() {
@@ -15,29 +15,27 @@ export default function ProductNav() {
   return (
     <div>
       <ul className="flex items-center justify-center mx-auto ">
-        {products?.map(
-          (product: { type: string | undefined; kind: (string | number | readonly string[] | undefined)[] }) => {
-            if (product.type === listName) {
-              return (
-                <>
-                  {product?.kind?.map((k, i) => {
-                    return (
-                      <li key={i} className="mr-[1rem]">
-                        <input
-                          type="button"
-                          value={k}
-                          onClick={() => {
-                            navigate(`/list/${listName}/${k}`);
-                          }}
-                        />
-                      </li>
-                    );
-                  })}
-                </>
-              );
-            }
+        {products?.map((product: { type: string; kind: string[] }) => {
+          if (product.type === listName) {
+            return (
+              <>
+                {product?.kind?.map((k, i) => {
+                  return (
+                    <li key={i} className="mr-[1rem]">
+                      <input
+                        type="button"
+                        value={k}
+                        onClick={() => {
+                          navigate(`/list/${listName}/${encodeURIComponent(k)}`);
+                        }}
+                      />
+                    </li>
+                  );
+                })}
+              </>
+            );
           }
-        )}
+        })}
       </ul>
     </div>
   );

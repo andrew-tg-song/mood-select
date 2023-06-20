@@ -1,9 +1,9 @@
-import { useContext } from 'react';
-import { DarkModeContext } from '../context/DarkModeContext';
+import { useRecoilState } from 'recoil';
+import { darkModeState } from '../atoms/app-atoms';
 import { BsFillEmojiSmileFill } from 'react-icons/bs';
 
 export default function Suggestion() {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
 
   return (
     <div

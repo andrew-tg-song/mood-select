@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import { DarkModeContext } from '../../context/DarkModeContext';
+import { useRecoilState } from 'recoil';
+import { darkModeState } from '../../atoms/app-atoms';
 
 interface TitleProps {
   text1: string;
@@ -7,7 +7,7 @@ interface TitleProps {
 }
 
 export default function Title({ text1, text2 }: TitleProps) {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
 
   return (
     <div className="flex flex-row items-end">

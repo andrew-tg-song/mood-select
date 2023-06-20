@@ -1,16 +1,15 @@
-import { search } from '../../ShoppingMallProducts';
+import { PromotionType } from 'entity';
+import { fetchPromotionByTitle } from '../../apis/promotion';
 import CardSlider from '../slider/CardSlider';
 import { useQuery } from '@tanstack/react-query';
 
 const CategoryBanner = (): JSX.Element => {
-  const name = 'CATEGORY';
-
-  const {
-    isLoading,
-    error,
-    data: products,
-  } = useQuery(['products', name], async () => search(name), { staleTime: 1000 * 60 * 5 });
-  console.log(products);
+  const { isLoading, error, data } = useQuery(
+    ['categoryBanners'],
+    () => fetchPromotionByTitle(PromotionType.BANNER, 'categoryBanners'),
+    { staleTime: 1000 * 60 * 5 }
+  );
+  const items = data?.items;
 
   return (
     <div className="w-[81.25rem] mx-auto pt-[8.75rem] mb-[140px]">
@@ -19,7 +18,7 @@ const CategoryBanner = (): JSX.Element => {
       ) : error ? (
         '<p>Something is wrong...😔</p>'
       ) : (
-        <CardSlider items={products} slidesToShow={2} slidesToScroll={2} />
+        <CardSlider items={items} slidesToShow={2} slidesToScroll={2} />
       )}
     </div>
   );

@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { search } from '../ShoppingMallProducts';
+import { search } from '../apis/ShoppingMallProducts';
 import { useParams } from 'react-router-dom';
 
 export default function List() {

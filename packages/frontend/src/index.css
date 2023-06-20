@@ -78,25 +78,6 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 .slider_wrapper {
   width: 81.25rem;
   margin-bottom: 140px;
@@ -403,6 +384,59 @@ button:focus-visible {
   z-index: 999999;
 
   cursor: pointer;
+}
+
+.slick-dots2 {
+  width: 100%;
+  margin-top: 10px;
+
+  position: relative;
+  bottom: 0;
+}
+
+.slick-dots2 li:first-child {
+  margin-left: 0;
+}
+
+.slick-dots2 li:last-child {
+  margin-right: 0;
+}
+
+.slick-dots2 li {
+  border-radius: 10px;
+
+  display: inline-block;
+  width: 18.85%;
+  margin: 5px;
+  height: 126px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots2 li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+  object-fit: cover;
+}
+
+.detail-card-slider .slick-slide img {
+  width: 100%;
+  height: 700px;
+  border-radius: 10px;
+
+  object-fit: cover;
+}
+
+.slick-dots2 li.slick-active {
+  border: 2px solid black;
+}
+
+.slick-dots2 li.slick-active img {
+  opacity: 50%;
+
+  object-fit: cover;
 }
 
 @media (prefers-color-scheme: light) {

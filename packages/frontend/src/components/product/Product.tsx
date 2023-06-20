@@ -2,8 +2,12 @@ export interface ProductType {
   id: string;
   typeA?: string;
   typeB?: string;
-  color?: string[];
+  color?: ProductObjectColor[];
   image?: string;
+  image2?: string;
+  image3?: string;
+  image4?: string;
+  image5?: string;
   title: string;
   desc: string;
   price?: number;
@@ -11,11 +15,33 @@ export interface ProductType {
   banner?: string[];
   best?: boolean;
   new?: boolean;
+  option?: ProductObject;
+  detail?: DetailObject;
+}
+
+interface ProductObjectColor {
+  name: string;
+  image?: string;
+}
+
+interface ProductObject {
+  size: string[];
+}
+
+interface DetailObject {
+  detailEventBanner: string[];
+  detailImage: string[];
+  similar: ProductType;
 }
 
 export interface ProductProps {
   product: ProductType;
   onClick(): void;
+}
+
+export interface ObjectCategory {
+  type: string;
+  kind: string[];
 }
 
 const truncate = (str: string, n: number) => {
@@ -35,20 +61,50 @@ export default function Product({ product, onClick }: ProductProps) {
             return (
               <div
                 className={`${
-                  c === 'red'
+                  c.name === 'red'
                     ? 'border-red'
-                    : c === 'black'
+                    : c.name === 'black'
                     ? 'border-[black]'
-                    : c === 'ivory'
+                    : c.name === 'ivory'
                     ? 'bg-[#ffffef] border-[#e0e0ca]'
-                    : c === 'pink'
+                    : c.name === 'pink'
                     ? 'border-[pink]'
-                    : c === 'white'
+                    : c.name === 'white'
                     ? 'border-[lightgray] bg-[white]'
-                    : 'border-[yellow]'
+                    : c.name === 'yellow'
+                    ? 'border-[yellow]'
+                    : c.name === 'beige'
+                    ? 'border-[beige]'
+                    : c.name === 'blue'
+                    ? 'border-[blue]'
+                    : c.name === 'brown'
+                    ? 'border-[brown]'
+                    : c.name === 'cream'
+                    ? 'border-[cream]'
+                    : c.name === 'deeppink'
+                    ? 'border-[deeppink]'
+                    : c.name === 'gray'
+                    ? 'border-[gray]'
+                    : c.name === 'green'
+                    ? 'border-[green]'
+                    : c.name === 'lavender'
+                    ? 'border-[lavender]'
+                    : c.name === 'lime'
+                    ? 'border-[lime]'
+                    : c.name === 'mint'
+                    ? 'border-[mint]'
+                    : c.name === 'navyblue'
+                    ? 'border-[navy]'
+                    : c.name === 'orange'
+                    ? 'border-[orange]'
+                    : c.name === 'redpurple'
+                    ? 'border-[redpurple]'
+                    : c.name === 'skyblue'
+                    ? 'border-[skyblue]'
+                    : 'border-[yellowgreen]'
                 } w-[1.25rem] h-[8px] indent-[-99999px] border-[0.6px] border-solid mr-[6px] my-[20px]`}
               >
-                {c}
+                {c.name}
               </div>
             );
           })}

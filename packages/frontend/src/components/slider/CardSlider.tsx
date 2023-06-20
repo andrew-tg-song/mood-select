@@ -1,20 +1,15 @@
 // export default CardSlider;
 import Slider from 'react-slick';
-import { ReactNode, useContext } from 'react';
+import { ReactNode } from 'react';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import NextArrow from './NextArrow';
 import PrevArrow from './PrevArrow';
-import { DarkModeContext } from '../../context/DarkModeContext';
 import Product, { ProductType } from '../product/Product';
-
-interface ObjectProps {
-  id: number;
-  image: string;
-  title: string;
-  desc: string;
-}
+import { useRecoilState } from 'recoil';
+import { darkModeState } from '../../atoms/app-atoms';
+import { PromotionItem } from 'entity';
 
 interface sliderProps {
   /** 커스텀 클래스 */
@@ -30,9 +25,11 @@ interface sliderProps {
 
   slidesToScroll?: number;
 
-  items?: ObjectProps[];
+  items?: PromotionItem[];
 
   products?: ProductType[];
+
+  item?: ProductType;
 }
 
 function CardSlider({
@@ -43,8 +40,9 @@ function CardSlider({
   slidesToShow,
   slidesToScroll,
   products,
+  item,
 }: sliderProps) {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode] = useRecoilState(darkModeState);
 
   const settings = {
     className: slidesToShow === 3 ? 'center' : '',
@@ -76,6 +74,8 @@ function CardSlider({
     dotsClass: darkMode === 'light' ? 'dots_custom' : 'dots_custom_dark',
   };
 
+  console.log(item?.detail?.similar);
+
   return (
     <div
       className={`${
@@ -88,7 +88,7 @@ function CardSlider({
           : 'slider_wrapper_today_delivery_products'
       }`}
     >
-      {items ? (
+      {items && (
         <>
           <Slider {...settings}>
             {items?.map((item) => {
@@ -112,11 +112,11 @@ function CardSlider({
                   )}
 
                   {slidesToShow === 1 ? (
-                    <img className="main_slider_img" src={item.image} />
+                    <img className="main_slider_img" src={item.imageUrl} />
                   ) : slidesToShow === 2 ? (
-                    <img className={`${item.id % 2 === 0 ? 'slider_img' : 'slider_img2'}`} src={item.image} />
+                    <img className={`${item.id % 2 === 0 ? 'slider_img' : 'slider_img2'}`} src={item.imageUrl} />
                   ) : (
-                    <img className="best_products_slider_img" src={item.image} />
+                    <img className="best_products_slider_img" src={item.imageUrl} />
                   )}
 
                   {slidesToShow === 1 ? (
@@ -124,12 +124,12 @@ function CardSlider({
                   ) : slidesToShow === 2 ? (
                     <div className="desc_wrap">
                       <h1 className="desc_h1">{item.title}</h1>
-                      <p className="desc_p">{item.desc}</p>
+                      <p className="desc_p">{item.description}</p>
                     </div>
                   ) : (
                     <div className="desc_wrap_best_products">
                       <h1 className="desc_h1_best_products">{item.title}</h1>
-                      <p className="desc_p_best_products">{item.desc}</p>
+                      <p className="desc_p_best_products">{item.description}</p>
                     </div>
                   )}
                 </div>
@@ -137,15 +137,15 @@ function CardSlider({
             })}
           </Slider>
         </>
-      ) : (
-        <>
-          <Slider {...settings}>
-            {products?.map((product, idx) => {
-              return <Product product={product} key={idx} onClick={() => void 0} />;
-            })}
-          </Slider>
-        </>
       )}
+
+      <>
+        <Slider {...settings}>
+          {products?.map((product, idx) => {
+            return <Product product={product} key={idx} onClick={() => void 0} />;
+          })}
+        </Slider>
+      </>
     </div>
   );
 }
